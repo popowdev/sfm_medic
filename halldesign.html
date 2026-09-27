@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hall Design — Factures & Devis</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#090b14;
+      --bg2:#121629;
+      --panel:rgba(18,20,35,.92);
+      --panel2:rgba(24,28,46,.96);
+      --line:rgba(212,171,98,.18);
+      --line2:rgba(212,171,98,.38);
+      --text:#f5e8c8;
+      --muted:#bca57a;
+      --accent:#d8b06c;
+      --accent-strong:#f0c97c;
+      --danger:#d96b5f;
+      --ok:#cdaa62;
+      --radius:18px;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    body{
+      font-family:Georgia,"Times New Roman",serif;
+      background:
+        radial-gradient(circle at top,#171b31 0%,#0a0c15 56%,#07080f 100%);
+      color:var(--text);
+      line-height:1.45;
+      padding:24px 16px 60px;
+    }
+    .app{max-width:980px;margin:0 auto}
+    .hero{
+      background:linear-gradient(180deg,rgba(19,23,40,.92),rgba(12,14,25,.95));
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      margin-bottom:18px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;inset:-30% auto auto -10%;
+      width:320px;height:320px;border-radius:50%;
+      background:radial-gradient(circle,rgba(216,176,108,.15),transparent 70%);
+      pointer-events:none;
+    }
+    .brand{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .brand-title{font-size:38px;letter-spacing:1px}
+    .brand-sub{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:3px;margin-top:4px}
+    .hero-right{text-align:right}
+    .hero-right .small{font-size:12px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+    .hero-right .big{font-size:18px;color:var(--accent-strong);margin-top:6px}
+
+    .tabs{
+      display:flex;gap:10px;margin:18px 0 16px;flex-wrap:wrap;
+    }
+    .tab-btn{
+      border:1px solid var(--line2);
+      border-radius:999px;
+      padding:10px 18px;
+      background:rgba(255,255,255,.02);
+      color:var(--text);
+      cursor:pointer;
+      font-size:14px;
+    }
+    .tab-btn.active{
+      background:rgba(216,176,108,.14);
+      color:var(--accent-strong);
+      border-color:rgba(240,201,124,.42);
+      box-shadow:0 0 0 1px rgba(240,201,124,.12) inset;
+    }
+
+    .toolbar{
+      display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    .week-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .week-card{
+      border:1px solid var(--line);
+      background:var(--panel2);
+      border-radius:16px;
+      padding:10px 14px;
+      min-width:220px;
+      text-align:center;
+    }
+    .week-card .main{font-size:15px}
+    .week-card .sub{font-size:12px;color:var(--muted)}
+    button{
+      border:1px solid var(--line2);
+      border-radius:12px;
+      padding:10px 14px;
+      background:rgba(255,255,255,.02);
+      color:var(--text);
+      cursor:pointer;
+      font-family:inherit;
+      font-size:13px;
+    }
+    button:hover{background:rgba(255,255,255,.05)}
+    .btn-primary{background:rgba(240,201,124,.12);color:var(--accent-strong)}
+    .btn-danger{color:var(--danger);border-color:rgba(217,107,95,.35)}
+    .btn-success{background:rgba(216,176,108,.12);color:var(--accent)}
+    .btn-soft{background:rgba(255,255,255,.02)}
+
+    .stats{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px;
+    }
+    .stat{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    .stat .label{font-size:12px;color:var(--muted);margin-bottom:6px}
+    .stat .value{font-size:25px;color:var(--accent-strong)}
+
+    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.brand{align-items:flex-start}.hero-right{text-align:left}}
+
+    .card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .card-title{
+      font-size:18px;
+      color:var(--accent-strong);
+      margin-bottom:14px;
+    }
+    .section-note{font-size:12px;color:var(--muted);margin-bottom:14px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+    @media (max-width:560px){.form-grid{grid-template-columns:1fr}}
+    .field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+    .field input,.field textarea{
+      width:100%;
+      background:#0d1020;
+      border:1px solid var(--line2);
+      color:var(--text);
+      border-radius:12px;
+      padding:10px 12px;
+      font:inherit;
+    }
+    .field textarea{min-height:92px;resize:vertical}
+    .field input:focus,.field textarea:focus{outline:none;border-color:rgba(240,201,124,.55)}
+    .lines-table{width:100%;border-collapse:collapse;margin-top:6px}
+    .lines-table th,.lines-table td{padding:8px;border-bottom:1px solid var(--line)}
+    .lines-table th{font-size:12px;color:var(--muted);font-weight:400;text-align:left}
+    .lines-table input{
+      width:100%;background:#0d1020;border:1px solid var(--line);color:var(--text);
+      border-radius:10px;padding:8px;font:inherit
+    }
+    .lines-table td:last-child,.lines-table th:last-child{text-align:center}
+    .add-line{width:100%;margin-top:10px;border-style:dashed}
+    .totals{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+    .total-row{display:flex;justify-content:space-between;padding:5px 0;color:var(--muted)}
+    .total-row.final{color:var(--accent-strong);font-size:19px;font-weight:700;padding-top:10px}
+    .actions{display:flex;justify-content:flex-end;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+    .list-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+    .list-title{font-size:18px;color:var(--accent-strong)}
+    .doc-list{display:flex;flex-direction:column;gap:10px}
+    .doc-row{
+      background:var(--panel2);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px;
+      display:grid;
+      grid-template-columns:90px 1fr 120px 130px auto;
+      gap:12px;
+      align-items:center;
+    }
+    @media (max-width:760px){.doc-row{grid-template-columns:1fr;}}
+    .doc-number{font-size:13px;color:var(--muted)}
+    .doc-client{font-size:17px}
+    .doc-date{font-size:13px;color:var(--muted)}
+    .doc-total{font-size:18px;color:var(--accent-strong);font-weight:700}
+    .doc-actions{display:flex;gap:8px;flex-wrap:wrap}
+    .empty{padding:36px 18px;text-align:center;color:var(--muted);border:1px dashed var(--line2);border-radius:18px}
+
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:999;padding:18px;align-items:center;justify-content:center}
+    .modal-overlay.open{display:flex}
+    .modal{
+      width:min(940px,100%);
+      max-height:92vh;
+      overflow:auto;
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:18px;
+    }
+    .modal-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+    .modal-title{font-size:20px;color:var(--accent-strong)}
+
+    .doc-preview{
+      background:rgba(8,10,18,.95);
+      border:1px solid rgba(216,176,108,.32);
+      border-radius:28px;
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .doc-preview:before{
+      content:"HALL DESIGN";
+      position:absolute;
+      inset:46% auto auto 50%;
+      transform:translate(-50%,-50%);
+      font-size:92px;
+      letter-spacing:2px;
+      color:rgba(216,176,108,.08);
+      white-space:nowrap;
+      pointer-events:none;
+    }
+    .paper-head{
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:start;
+      gap:14px;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(216,176,108,.25);
+      margin-bottom:26px;
+    }
+    .paper-meta{font-size:15px}
+    .paper-meta strong{display:block;font-size:20px;color:var(--accent-strong)}
+    .paper-center{
+      text-align:center;
+      font-size:64px;
+      line-height:1;
+      color:#fff5dd;
+      font-style:italic;
+      font-family:"Times New Roman",serif;
+      opacity:.95;
+      margin-top:10px;
+    }
+    .paper-brand{text-align:right}
+    .paper-brand .name{font-size:28px;color:var(--accent-strong)}
+    .paper-brand .tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+    .paper-parties{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      margin-bottom:24px;
+    }
+    @media (max-width:700px){.paper-head{grid-template-columns:1fr}.paper-center{text-align:left;font-size:48px}.paper-brand{text-align:left}.paper-parties{grid-template-columns:1fr}}
+    .paper-box{
+      border:1px solid rgba(216,176,108,.2);
+      border-radius:18px;
+      padding:16px;
+      background:rgba(255,255,255,.02);
+      min-height:118px;
+    }
+    .paper-box .label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+    .paper-box .line{font-size:15px;margin-bottom:6px}
+    .paper-table{
+      width:100%;
+      border-collapse:collapse;
+      margin:14px 0 18px;
+      overflow:hidden;
+      border-radius:18px;
+      table-layout:fixed;
+    }
+    .paper-table th{
+      background:rgba(255,255,255,.04);
+      color:#fff1d1;
+      font-size:14px;
+      font-weight:400;
+      padding:14px 12px;
+      border:1px solid rgba(216,176,108,.2);
+    }
+    .paper-table td{
+      padding:14px 12px;
+      border:1px solid rgba(216,176,108,.16);
+      font-size:14px;
+      color:#f5e8c8;
+      background:rgba(255,255,255,.015);
+    }
+    .paper-table td.num{text-align:right}
+    .paper-table td.center{text-align:center}
+    .paper-totals{
+      margin-left:auto;
+      width:min(340px,100%);
+    }
+    .paper-total-row{
+      display:flex;justify-content:space-between;gap:14px;
+      padding:10px 0;border-bottom:1px solid rgba(216,176,108,.14)
+    }
+    .paper-total-row.final{
+      margin-top:8px;
+      border:none;
+      background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(216,176,108,.16));
+      border-radius:16px;
+      padding:14px 16px;
+      font-size:24px;
+      color:#fff4dc;
+      font-weight:700;
+    }
+    .paper-footer{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-top:38px;
+      align-items:end;
+    }
+    @media (max-width:700px){.paper-footer{grid-template-columns:1fr}}
+    .validity{font-size:15px;color:#efe2c2}
+    .signature-block{font-size:15px;text-align:right}
+    .signature{
+      margin-top:20px;
+      font-size:52px;
+      font-style:italic;
+      color:rgba(255,245,221,.92);
+      font-family:"Brush Script MT","Segoe Script",cursive;
+    }
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="hero">
+      <div class="brand">
+        <div>
+          <div class="brand-title">Hall Design</div>
+          <div class="brand-sub">Décoration d’intérieur</div>
+        </div>
+        <div class="hero-right">
+          <div class="small">Gestion</div>
+          <div class="big">Factures & Devis</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-mode="invoice">Factures</button>
+      <button class="tab-btn" data-mode="quote">Devis</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="week-nav">
+        <button id="btnPrevWeek">← Semaine préc.</button>
+        <div class="week-card">
+          <div class="main" id="weekLabel">—</div>
+          <div class="sub" id="weekSub">Semaine active</div>
+        </div>
+        <button id="btnNextWeek">Semaine suiv. →</button>
+      </div>
+      <button id="btnExportWeek" class="btn-success">Exporter la semaine (PNG)</button>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="label" id="statLabelCount">Factures</div><div class="value" id="statCount">0</div></div>
+      <div class="stat"><div class="label">Montant total</div><div class="value" id="statHT">0,00 $</div></div>
+      <div class="stat"><div class="label" id="statLabelAverage">Panier moyen</div><div class="value" id="statAvg">0,00 $</div></div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-title" id="formTitle">Nouvelle facture</div>
+        <div class="section-note" id="formNote">Crée une facture élégante dans le style Hall Design.</div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>Client *</label>
+            <input id="fClient" type="text" placeholder="Nom du client">
+          </div>
+          <div class="field">
+            <label>Date</label>
+            <input id="fDate" type="date">
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>Adresse / contact client</label>
+            <input id="fAddr" type="text" placeholder="Adresse ou informations utiles">
+          </div>
+          <div class="field">
+            <label id="fDocNumberLabel">N° document</label>
+            <input id="fDocNumber" type="text" placeholder="Automatique" disabled>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label>Votre nom / contact</label>
+            <input id="fSender" type="text" placeholder="Hall Miky">
+          </div>
+          <div class="field">
+            <label>Téléphone / référence</label>
+            <input id="fSenderPhone" type="text" placeholder="555-5476">
+          </div>
+        </div>
+
+        <div class="field" id="quoteNoteField" style="display:none;margin-bottom:12px">
+          <label>Note de devis</label>
+          <textarea id="fQuoteNote" placeholder="Ex: Ce devis est valable 30 jours. Signature suivie de la mention “Bon pour accord”."></textarea>
+        </div>
+
+        <div class="section-note">Prestations</div>
+        <div style="overflow-x:auto">
+          <table class="lines-table">
+            <thead>
+              <tr>
+                <th style="width:44%">Description</th>
+                <th style="width:14%">Qté</th>
+                <th style="width:22%">Prix unitaire</th>
+                <th style="width:15%">Total</th>
+                <th style="width:5%"></th>
+              </tr>
+            </thead>
+            <tbody id="linesTbody"></tbody>
+          </table>
+        </div>
+        <button id="btnAddLine" class="add-line">+ Ajouter une prestation</button>
+
+        <div class="totals">
+          <div class="total-row"><span>Sous-total</span><span id="subHT">0,00 $</span></div>
+          <div class="total-row final"><span>Total</span><span id="subTTC">0,00 $</span></div>
+        </div>
+
+        <div class="actions">
+          <button id="btnReset" class="btn-soft">Effacer</button>
+          <button id="btnSave" class="btn-primary">Enregistrer</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="list-head">
+          <div class="list-title" id="listTitle">Factures de la semaine</div>
+        </div>
+        <div id="docList" class="doc-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-top">
+        <div class="modal-title" id="modalTitle">Aperçu</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button id="btnExportSingle" class="btn-success">Exporter PNG</button>
+          <button id="btnCloseModal">Fermer</button>
+        </div>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+  (function(){
+    const STORE_KEY = 'hall_design_docs_v3';
+    const COMPANY = 'HALL DESIGN';
+    const DEFAULT_QUOTE_NOTE = 'Ce devis est valable 30 jours. Signature suivie de la mention “Bon pour accord”.';
+    let weekOffset = 0;
+    let activeMode = 'invoice';
+    let editId = null;
+    let lines = [];
+
+    function qs(id){ return document.getElementById(id); }
+    function esc(s){ return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function fmtMoney(n){
+      return Number(n || 0).toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' $';
+    }
+    function fmtDate(d){
+      return d.toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'});
+    }
+    function todayISO(){ return new Date().toISOString().slice(0,10); }
+    function dbLoad(){
+      try{
+        const db = JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+        db.invoices = db.invoices || {};
+        db.quotes = db.quotes || {};
+        return db;
+      }catch(e){
+        return { invoices:{}, quotes:{} };
+      }
+    }
+    function dbSave(db){ localStorage.setItem(STORE_KEY, JSON.stringify(db)); }
+    function currentSunday(offset){
+      const now = new Date();
+      const sun = new Date(now);
+      sun.setDate(now.getDate() - now.getDay() + offset * 7);
+      sun.setHours(0,0,0,0);
+      return sun;
+    }
+    function currentWeekKey(){
+      return currentSunday(weekOffset).toISOString().slice(0,10);
+    }
+    function weekBounds(){
+      const sun = currentSunday(weekOffset);
+      const sat = new Date(sun);
+      sat.setDate(sun.getDate()+6);
+      return {sun, sat};
+    }
+    function getBucketName(){
+      return activeMode === 'invoice' ? 'invoices' : 'quotes';
+    }
+    function getDocsForWeek(){
+      const db = dbLoad();
+      const bucket = db[getBucketName()] || {};
+      const list = bucket[currentWeekKey()] || [];
+      return list.slice().sort((a,b)=>a.num-b.num);
+    }
+    function nextNum(mode){
+      const db = dbLoad();
+      const bucket = db[mode === 'invoice' ? 'invoices' : 'quotes'] || {};
+      let max = 0;
+      Object.values(bucket).forEach(arr => (arr || []).forEach(doc => { if(doc.num > max) max = doc.num; }));
+      return max + 1;
+    }
+    function getPrefix(){ return activeMode === 'invoice' ? 'FAC' : 'DEV'; }
+
+    function setMode(mode){
+      activeMode = mode;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.mode === mode));
+      qs('formTitle').textContent = mode === 'invoice' ? 'Nouvelle facture' : 'Nouveau devis';
+      qs('formNote').textContent = mode === 'invoice'
+        ? 'Crée une facture élégante dans le style Hall Design.'
+        : 'Prépare un devis premium, propre et lisible pour tes clients.';
+      qs('listTitle').textContent = mode === 'invoice' ? 'Factures de la semaine' : 'Devis de la semaine';
+      qs('statLabelCount').textContent = mode === 'invoice' ? 'Factures' : 'Devis';
+      qs('weekSub').textContent = mode === 'invoice' ? 'Semaine des factures' : 'Semaine des devis';
+      qs('btnExportWeek').textContent = mode === 'invoice' ? 'Exporter la semaine factures (PNG)' : 'Exporter la semaine devis (PNG)';
+      qs('quoteNoteField').style.display = mode === 'quote' ? 'block' : 'none';
+      resetForm();
+      renderWeek();
+    }
+
+    function initDate(){ qs('fDate').value = todayISO(); }
+    function addLine(desc='', qty=1, price=''){
+      lines.push({ id: Date.now() + Math.random(), desc, qty, price });
+      renderLines();
+    }
+    function removeLine(id){
+      lines = lines.filter(l => l.id !== id);
+      renderLines();
+    }
+    function renderLines(){
+      const tbody = qs('linesTbody');
+      let total = 0;
+      tbody.innerHTML = '';
+      lines.forEach(line => {
+        const lineTotal = (parseFloat(line.qty) || 0) * (parseFloat(line.price) || 0);
+        total += lineTotal;
+        const tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td><input type="text" value="'+esc(line.desc)+'" placeholder="Description…" data-id="'+line.id+'" data-field="desc"></td>' +
+          '<td><input type="number" min="0.01" step="0.01" value="'+line.qty+'" data-id="'+line.id+'" data-field="qty"></td>' +
+          '<td><input type="number" min="0" step="0.01" value="'+line.price+'" placeholder="0,00" data-id="'+line.id+'" data-field="price"></td>' +
+          '<td style="text-align:right;font-weight:700">'+(lineTotal > 0 ? fmtMoney(lineTotal) : '—')+'</td>' +
+          '<td><button type="button" class="btn-danger" data-del="'+line.id+'" style="padding:6px 9px">×</button></td>';
+        tbody.appendChild(tr);
+      });
+      qs('subHT').textContent = fmtMoney(total);
+      qs('subTTC').textContent = fmtMoney(total);
+    }
+
+    function resetForm(){
+      editId = null;
+      qs('fClient').value = '';
+      qs('fAddr').value = '';
+      qs('fSender').value = 'Hall Miky';
+      qs('fSenderPhone').value = '555-5476';
+      qs('fQuoteNote').value = DEFAULT_QUOTE_NOTE;
+      initDate();
+      lines = [{ id: Date.now(), desc:'', qty:1, price:'' }];
+      qs('btnSave').textContent = activeMode === 'invoice' ? 'Enregistrer la facture' : 'Enregistrer le devis';
+      qs('fDocNumber').value = getPrefix() + '-' + String(nextNum(activeMode)).padStart(4,'0');
+      renderLines();
+    }
+
+    function readForm(){
+      const validLines = lines.filter(l => String(l.desc || '').trim() && parseFloat(l.price) > 0);
+      const total = validLines.reduce((sum,l) => sum + (parseFloat(l.qty) || 0) * (parseFloat(l.price) || 0), 0);
+      return {
+        id: editId || (activeMode + '_' + Date.now()),
+        type: activeMode,
+        num: editId ? findDocById(editId)?.num || nextNum(activeMode) : nextNum(activeMode),
+        client: qs('fClient').value.trim(),
+        addr: qs('fAddr').value.trim(),
+        sender: qs('fSender').value.trim(),
+        senderPhone: qs('fSenderPhone').value.trim(),
+        quoteNote: qs('fQuoteNote').value.trim() || DEFAULT_QUOTE_NOTE,
+        date: qs('fDate').value || todayISO(),
+        total,
+        lines: validLines.map(l => ({
+          desc: String(l.desc || '').trim(),
+          qty: parseFloat(l.qty) || 0,
+          price: parseFloat(l.price) || 0,
+          total: (parseFloat(l.qty) || 0) * (parseFloat(l.price) || 0)
+        }))
+      };
+    }
+
+    function findDocById(id){
+      const db = dbLoad();
+      const bucket = db[getBucketName()] || {};
+      const key = currentWeekKey();
+      return (bucket[key] || []).find(d => d.id === id) || null;
+    }
+
+    function saveDoc(){
+      const doc = readForm();
+      if(!doc.client){ alert('Veuillez saisir le nom du client.'); return; }
+      if(!doc.lines.length){ alert('Ajoutez au moins une prestation avec un prix.'); return; }
+
+      const db = dbLoad();
+      const bucketName = getBucketName();
+      const key = currentWeekKey();
+      db[bucketName][key] = db[bucketName][key] || [];
+
+      const idx = db[bucketName][key].findIndex(d => d.id === doc.id);
+      if(idx >= 0) db[bucketName][key][idx] = doc;
+      else db[bucketName][key].push(doc);
+
+      dbSave(db);
+      resetForm();
+      renderWeek();
+    }
+
+    function deleteDoc(id){
+      if(!confirm(activeMode === 'invoice' ? 'Supprimer cette facture ?' : 'Supprimer ce devis ?')) return;
+      const db = dbLoad();
+      const bucketName = getBucketName();
+      const key = currentWeekKey();
+      db[bucketName][key] = (db[bucketName][key] || []).filter(d => d.id !== id);
+      dbSave(db);
+      renderWeek();
+    }
+
+    function startEdit(id){
+      const doc = findDocById(id);
+      if(!doc) return;
+      editId = id;
+      qs('fClient').value = doc.client || '';
+      qs('fAddr').value = doc.addr || '';
+      qs('fSender').value = doc.sender || '';
+      qs('fSenderPhone').value = doc.senderPhone || '';
+      qs('fQuoteNote').value = doc.quoteNote || DEFAULT_QUOTE_NOTE;
+      qs('fDate').value = doc.date || todayISO();
+      qs('fDocNumber').value = getPrefix() + '-' + String(doc.num).padStart(4,'0');
+      qs('btnSave').textContent = activeMode === 'invoice' ? 'Mettre à jour la facture' : 'Mettre à jour le devis';
+      lines = (doc.lines || []).map(l => ({ id: Date.now() + Math.random(), desc:l.desc, qty:l.qty, price:l.price }));
+      if(!lines.length) lines = [{ id: Date.now(), desc:'', qty:1, price:'' }];
+      renderLines();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderWeek(){
+      const docs = getDocsForWeek();
+      const bounds = weekBounds();
+      qs('weekLabel').textContent = fmtDate(bounds.sun) + ' — ' + fmtDate(bounds.sat);
+      qs('statCount').textContent = docs.length;
+      const total = docs.reduce((sum,d) => sum + (d.total || 0), 0);
+      qs('statHT').textContent = fmtMoney(total);
+      qs('statAvg').textContent = fmtMoney(docs.length ? total / docs.length : 0);
+      qs('listTitle').textContent = (activeMode === 'invoice' ? 'Factures' : 'Devis') + ' — semaine du ' + fmtDate(bounds.sun);
+
+      const list = qs('docList');
+      if(!docs.length){
+        list.innerHTML = '<div class="empty">Aucun document sur cette période.</div>';
+        return;
+      }
+
+      list.innerHTML = '';
+      docs.forEach(doc => {
+        const row = document.createElement('div');
+        row.className = 'doc-row';
+        row.innerHTML =
+          '<div class="doc-number">'+getPrefix()+'-'+String(doc.num).padStart(4,'0')+'</div>' +
+          '<div><div class="doc-client">'+esc(doc.client)+'</div><div class="doc-date">'+(doc.addr ? esc(doc.addr) : '—')+'</div></div>' +
+          '<div class="doc-date">'+new Date(doc.date + 'T12:00:00').toLocaleDateString('fr-FR')+'</div>' +
+          '<div class="doc-total">'+fmtMoney(doc.total)+'</div>' +
+          '<div class="doc-actions">' +
+            '<button data-view="'+doc.id+'">Voir</button>' +
+            '<button data-edit="'+doc.id+'">Modifier</button>' +
+            '<button data-del="'+doc.id+'" class="btn-danger">Supprimer</button>' +
+          '</div>';
+        list.appendChild(row);
+      });
+
+      list.querySelectorAll('[data-view]').forEach(btn => btn.addEventListener('click', ()=> openPreview(btn.dataset.view)));
+      list.querySelectorAll('[data-edit]').forEach(btn => btn.addEventListener('click', ()=> startEdit(btn.dataset.edit)));
+      list.querySelectorAll('[data-del]').forEach(btn => btn.addEventListener('click', ()=> deleteDoc(btn.dataset.del)));
+    }
+
+    function buildPreview(doc){
+      const titleWord = doc.type === 'quote' ? 'Devis' : 'Facture';
+      const rows = (doc.lines || []).map(line => (
+        '<tr>' +
+          '<td>'+esc(line.desc)+'</td>' +
+          '<td class="center">'+line.qty+'</td>' +
+          '<td class="num">'+fmtMoney(line.price)+'</td>' +
+          '<td class="num">'+fmtMoney(line.total)+'</td>' +
+        '</tr>'
+      )).join('');
+
+      const footerLeft = doc.type === 'quote'
+        ? '<div class="validity">'+esc(doc.quoteNote || DEFAULT_QUOTE_NOTE)+'</div>'
+        : '<div class="validity">Merci pour votre confiance.</div>';
+
+      const footerRight = doc.type === 'quote'
+        ? '<div class="signature-block"><div>Signature suivie de la mention</div><div><strong>“Bon pour accord”</strong></div><div class="signature">Hall M.</div></div>'
+        : '<div class="signature-block"><div>Document émis par '+esc(doc.sender || 'Hall Design')+'</div><div class="signature">Hall M.</div></div>';
+
+      return '' +
+        '<div class="doc-preview" id="exportTarget">' +
+          '<div class="paper-head">' +
+            '<div class="paper-meta">' +
+              '<div>'+new Date(doc.date + 'T12:00:00').toLocaleDateString('fr-FR')+'</div>' +
+              '<strong>'+titleWord+' n°'+String(doc.num).padStart(4,'0')+'</strong>' +
+            '</div>' +
+            '<div class="paper-center">'+titleWord+'</div>' +
+            '<div class="paper-brand">' +
+              '<div class="name">'+COMPANY+'</div>' +
+              '<div class="tag">Décoration d’intérieur</div>' +
+            '</div>' +
+          '</div>' +
+
+          '<div class="paper-parties">' +
+            '<div class="paper-box">' +
+              '<div class="label">Émis par</div>' +
+              '<div class="line"><strong>'+esc(doc.sender || 'Hall Design')+'</strong></div>' +
+              '<div class="line">'+esc(doc.senderPhone || '—')+'</div>' +
+            '</div>' +
+            '<div class="paper-box">' +
+              '<div class="label">À l’attention de</div>' +
+              '<div class="line">'+esc(doc.client)+'</div>' +
+              '<div class="line">'+(doc.addr ? esc(doc.addr) : '—')+'</div>' +
+            '</div>' +
+          '</div>' +
+
+          '<table class="paper-table">' +
+            '<thead><tr>' +
+              '<th style="width:46%">Prestation</th>' +
+              '<th style="width:14%">Quantité</th>' +
+              '<th style="width:20%">Prix</th>' +
+              '<th style="width:20%">Total</th>' +
+            '</tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+          '</table>' +
+
+          '<div class="paper-totals">' +
+            '<div class="paper-total-row"><span>Sous-total</span><strong>'+fmtMoney(doc.total)+'</strong></div>' +
+            '<div class="paper-total-row final"><span>Total</span><span>'+fmtMoney(doc.total)+'</span></div>' +
+          '</div>' +
+
+          '<div class="paper-footer">' +
+            footerLeft +
+            footerRight +
+          '</div>' +
+        '</div>';
+    }
+
+    let previewDoc = null;
+    function openPreview(id){
+      const doc = findDocById(id);
+      if(!doc) return;
+      previewDoc = doc;
+      qs('modalTitle').textContent = (doc.type === 'quote' ? 'Aperçu du devis' : 'Aperçu de la facture') + ' — ' + doc.client;
+      qs('modalBody').innerHTML = buildPreview(doc);
+      qs('modalOverlay').classList.add('open');
+    }
+    function closeModal(){
+      qs('modalOverlay').classList.remove('open');
+      previewDoc = null;
+    }
+
+    function exportNodeAsPng(node, filename){
+      html2canvas(node, { backgroundColor: null, scale: 2 }).then(canvas => {
+        const a = document.createElement('a');
+        a.download = filename;
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+      });
+    }
+
+    function exportSingle(){
+      if(!previewDoc) return;
+      const target = qs('exportTarget');
+      if(!target) return;
+      const file = (previewDoc.type === 'quote' ? 'devis_' : 'facture_') + String(previewDoc.num).padStart(4,'0') + '_' + previewDoc.client.replace(/[^a-zA-Z0-9_-]/g,'_') + '.png';
+      exportNodeAsPng(target, file);
+    }
+
+    function exportWeek(){
+      const docs = getDocsForWeek();
+      if(!docs.length){ alert('Aucun document à exporter cette semaine.'); return; }
+
+      const bounds = weekBounds();
+      const total = docs.reduce((sum,d) => sum + (d.total || 0), 0);
+
+      const wrapper = document.createElement('div');
+      wrapper.style.cssText = 'position:absolute;left:-9999px;top:0;padding:34px;width:1100px;background:transparent;font-family:Georgia,serif;color:#f5e8c8;';
+      wrapper.innerHTML =
+        '<div style="background:rgba(8,10,18,.96);border:2px solid rgba(216,176,108,.28);border-radius:30px;padding:30px;position:relative;overflow:hidden">' +
+          '<div style="display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid rgba(216,176,108,.22)">' +
+            '<div><div style="font-size:34px;color:#f0c97c">HALL DESIGN</div><div style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#bca57a">Décoration d’intérieur</div></div>' +
+            '<div style="text-align:right"><div style="font-size:14px;color:#bca57a">Récapitulatif '+(activeMode === 'quote' ? 'devis' : 'factures')+'</div><div style="font-size:22px">'+fmtDate(bounds.sun)+' — '+fmtDate(bounds.sat)+'</div></div>' +
+          '</div>' +
+          '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0">' +
+            '<div style="background:rgba(255,255,255,.03);border:1px solid rgba(216,176,108,.16);border-radius:18px;padding:18px;text-align:center"><div style="font-size:12px;color:#bca57a;margin-bottom:6px">'+(activeMode === 'quote' ? 'Devis' : 'Factures')+'</div><div style="font-size:34px;color:#f0c97c">'+docs.length+'</div></div>' +
+            '<div style="background:rgba(255,255,255,.03);border:1px solid rgba(216,176,108,.16);border-radius:18px;padding:18px;text-align:center"><div style="font-size:12px;color:#bca57a;margin-bottom:6px">Montant total</div><div style="font-size:34px;color:#f0c97c">'+fmtMoney(total)+'</div></div>' +
+            '<div style="background:rgba(255,255,255,.03);border:1px solid rgba(216,176,108,.16);border-radius:18px;padding:18px;text-align:center"><div style="font-size:12px;color:#bca57a;margin-bottom:6px">Panier moyen</div><div style="font-size:34px;color:#f0c97c">'+fmtMoney(total / docs.length)+'</div></div>' +
+          '</div>' +
+          '<table style="width:100%;border-collapse:collapse;table-layout:fixed">' +
+            '<thead><tr>' +
+              '<th style="padding:14px 10px;text-align:left;border:1px solid rgba(216,176,108,.18);background:rgba(255,255,255,.04)">N°</th>' +
+              '<th style="padding:14px 10px;text-align:left;border:1px solid rgba(216,176,108,.18);background:rgba(255,255,255,.04)">Client</th>' +
+              '<th style="padding:14px 10px;text-align:left;border:1px solid rgba(216,176,108,.18);background:rgba(255,255,255,.04)">Date</th>' +
+              '<th style="padding:14px 10px;text-align:right;border:1px solid rgba(216,176,108,.18);background:rgba(255,255,255,.04)">Montant</th>' +
+            '</tr></thead>' +
+            '<tbody>' +
+              docs.map(doc => (
+                '<tr>' +
+                  '<td style="padding:12px 10px;border:1px solid rgba(216,176,108,.14)">'+getPrefix()+'-'+String(doc.num).padStart(4,'0')+'</td>' +
+                  '<td style="padding:12px 10px;border:1px solid rgba(216,176,108,.14)">'+esc(doc.client)+'</td>' +
+                  '<td style="padding:12px 10px;border:1px solid rgba(216,176,108,.14)">'+new Date(doc.date + 'T12:00:00').toLocaleDateString('fr-FR')+'</td>' +
+                  '<td style="padding:12px 10px;border:1px solid rgba(216,176,108,.14);text-align:right;font-weight:700">'+fmtMoney(doc.total)+'</td>' +
+                '</tr>'
+              )).join('') +
+            '</tbody>' +
+          '</table>' +
+        '</div>';
+      document.body.appendChild(wrapper);
+      exportNodeAsPng(wrapper.firstChild, (activeMode === 'quote' ? 'recap_devis_' : 'recap_factures_') + currentWeekKey() + '.png');
+      setTimeout(() => wrapper.remove(), 700);
+    }
+
+    qs('linesTbody').addEventListener('input', function(e){
+      const el = e.target;
+      const id = parseFloat(el.dataset.id);
+      const field = el.dataset.field;
+      if(!field) return;
+      const line = lines.find(l => l.id === id);
+      if(!line) return;
+
+      line[field] = el.value;
+    });
+
+    qs('linesTbody').addEventListener('change', function(e){
+      const el = e.target;
+      const id = parseFloat(el.dataset.id);
+      const field = el.dataset.field;
+      if(!field) return;
+      const line = lines.find(l => l.id === id);
+      if(!line) return;
+
+      line[field] = el.value;
+      renderLines();
+    });
+
+    qs('linesTbody').addEventListener('focusout', function(e){
+      const el = e.target;
+      if(!el || !el.dataset) return;
+      const id = parseFloat(el.dataset.id);
+      const field = el.dataset.field;
+      if(!field) return;
+      const line = lines.find(l => l.id === id);
+      if(!line) return;
+
+      line[field] = el.value;
+      renderLines();
+    });
+    qs('linesTbody').addEventListener('click', function(e){
+      const btn = e.target.closest('[data-del]');
+      if(btn) removeLine(parseFloat(btn.dataset.del));
+    });
+
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', ()=> setMode(btn.dataset.mode)));
+    qs('btnAddLine').addEventListener('click', ()=> addLine());
+    qs('btnReset').addEventListener('click', resetForm);
+    qs('btnSave').addEventListener('click', saveDoc);
+    qs('btnPrevWeek').addEventListener('click', ()=> { weekOffset--; renderWeek(); });
+    qs('btnNextWeek').addEventListener('click', ()=> { weekOffset++; renderWeek(); });
+    qs('btnExportWeek').addEventListener('click', exportWeek);
+    qs('btnCloseModal').addEventListener('click', closeModal);
+    qs('btnExportSingle').addEventListener('click', exportSingle);
+    qs('modalOverlay').addEventListener('click', function(e){ if(e.target === qs('modalOverlay')) closeModal(); });
+
+    resetForm();
+    renderWeek();
+  })();
+</script>
+</body>
+</html>

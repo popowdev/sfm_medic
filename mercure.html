@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ouverture Mercure H</title>
+  <style>
+    :root {
+      --bg: #120d09;
+      --panel: rgba(42, 27, 16, 0.82);
+      --panel-2: rgba(66, 42, 23, 0.72);
+      --gold: #d8a43a;
+      --gold-light: #ffd36b;
+      --text: #f5e4bd;
+      --muted: #c9aa75;
+      --border: rgba(216, 164, 58, 0.35);
+      --green: #5d874b;
+      --red: #8f3b2f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--text);
+      background:
+        linear-gradient(rgba(18, 13, 9, 0.78), rgba(18, 13, 9, 0.9)),
+        radial-gradient(circle at top left, rgba(216, 164, 58, .22), transparent 34%),
+        linear-gradient(135deg, #0d0805, #2a1a10 55%, #130c08);
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .left,
+    .right {
+      min-height: 100vh;
+      padding: clamp(24px, 4vw, 56px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left {
+      border-right: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.16);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 0 auto 22px;
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--gold-light);
+      background: rgba(0,0,0,.24);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: .9rem;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--gold);
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      line-height: .95;
+      text-transform: uppercase;
+      text-shadow: 0 6px 22px rgba(0,0,0,.55);
+    }
+
+    .subtitle {
+      margin: 18px auto 34px;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+      line-height: 1.45;
+    }
+
+    .timer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 620px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .time-box {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: clamp(18px, 2.5vw, 30px) 12px;
+      background: linear-gradient(180deg, var(--panel), rgba(25,16,10,.86));
+      box-shadow: 0 18px 40px rgba(0,0,0,.32);
+    }
+
+    .time-box strong {
+      display: block;
+      color: var(--gold-light);
+      font-size: clamp(2.4rem, 5vw, 5.4rem);
+      line-height: 1;
+    }
+
+    .time-box span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .85rem;
+    }
+
+    .open-message {
+      display: none;
+      margin-top: 30px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(93,135,75,.7);
+      background: rgba(93,135,75,.22);
+      color: #dcffd2;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .right {
+      background: rgba(0, 0, 0, .08);
+    }
+
+    .watch-card {
+      width: min(680px, 100%);
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: clamp(22px, 3vw, 34px);
+      background: linear-gradient(180deg, var(--panel), var(--panel-2));
+      box-shadow: 0 20px 60px rgba(0,0,0,.42);
+    }
+
+    .watch-card h2 {
+      margin: 0 0 8px;
+      color: var(--gold-light);
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+    }
+
+    .remaining-text {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .suggestions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .suggestion {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid rgba(216, 164, 58, .24);
+      border-radius: 16px;
+      background: rgba(0,0,0,.22);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(216, 164, 58, .18);
+      font-size: 1.25rem;
+    }
+
+    .suggestion strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.03rem;
+    }
+
+    .suggestion small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+    }
+
+    .duration {
+      color: var(--gold-light);
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .refresh {
+      margin-top: 22px;
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 16px;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      color: #251709;
+      background: var(--gold);
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    .refresh:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+    }
+
+    .empty {
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(143,59,47,.55);
+      background: rgba(143,59,47,.18);
+      color: #ffd2ca;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 900px) {
+      .page { grid-template-columns: 1fr; }
+      .left { border-right: 0; border-bottom: 1px solid var(--border); }
+      .left, .right { min-height: auto; }
+      .timer { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .timer { gap: 8px; }
+      .time-box { border-radius: 14px; padding: 16px 8px; }
+      .suggestion { grid-template-columns: auto 1fr; }
+      .duration { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="left">
+      <div class="badge">Mercure H</div>
+      <h1>Ouverture<br>à 20h00</h1>
+      <p class="subtitle" id="countdownText">Calcul du temps restant...</p>
+
+      <div class="timer" id="timer">
+        <div class="time-box"><strong id="hours">00</strong><span>Heures</span></div>
+        <div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div class="time-box"><strong id="seconds">00</strong><span>Secondes</span></div>
+      </div>
+
+      <div class="open-message" id="openMessage">Le serveur est ouvert, bon RP !</div>
+    </section>
+
+    <section class="right">
+      <div class="watch-card">
+        <h2>Que regarder avant 20h ?</h2>
+        <p class="remaining-text" id="watchIntro">On cherche ce qui rentre dans ton temps restant...</p>
+        <div class="suggestions" id="suggestions"></div>
+        <button class="refresh" onclick="renderSuggestions()">Changer les idées</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const openingHour = 20;
+    const openingMinute = 0;
+
+    const watchList = [
+      { type: 'film', icon: '🎬', title: 'Tombstone', duration: 130 },
+      { type: 'film', icon: '🎬', title: 'Retour vers le Futur', duration: 116 },
+      { type: 'film', icon: '🎬', title: 'Django Unchained', duration: 165 },
+      { type: 'film', icon: '🎬', title: 'True Grit', duration: 110 },
+      { type: 'film', icon: '🎬', title: 'Le Bon, la Brute et le Truand', duration: 178 },
+      { type: 'film', icon: '🎬', title: 'Il était une fois dans l’Ouest', duration: 166 },
+      { type: 'film', icon: '🎬', title: 'The Hateful Eight', duration: 168 },
+      { type: 'film', icon: '🎬', title: 'Rango', duration: 107 },
+      { type: 'série', icon: '📺', title: '1 épisode de Deadwood', duration: 55 },
+      { type: 'série', icon: '📺', title: '2 épisodes de Deadwood', duration: 110 },
+      { type: 'série', icon: '📺', title: '1 épisode de 1883', duration: 60 },
+      { type: 'série', icon: '📺', title: '1 épisode de Yellowstone', duration: 45 },
+      { type: 'série', icon: '📺', title: '2 épisodes de Yellowstone', duration: 90 },
+      { type: 'série', icon: '📺', title: '1 épisode de The Last of Us', duration: 55 },
+      { type: 'série', icon: '📺', title: '2 épisodes de The Office', duration: 44 },
+      { type: 'série', icon: '📺', title: '3 épisodes de Malcolm', duration: 66 },
+      { type: 'série', icon: '📺', title: '4 épisodes de Friends', duration: 88 },
+      { type: 'anime', icon: '🍜', title: '1 épisode de One Piece', duration: 24 },
+      { type: 'anime', icon: '🍜', title: '3 épisodes de One Piece', duration: 72 },
+      { type: 'anime', icon: '🍜', title: '5 épisodes de One Piece', duration: 120 },
+      { type: 'anime', icon: '🍜', title: '1 épisode de Naruto', duration: 23 },
+      { type: 'anime', icon: '🍜', title: '3 épisodes de Naruto', duration: 69 },
+      { type: 'anime', icon: '🍜', title: '1 épisode de Demon Slayer', duration: 24 },
+      { type: 'anime', icon: '🍜', title: '2 épisodes de Jujutsu Kaisen', duration: 48 },
+      { type: 'anime', icon: '🍜', title: '2 épisodes de L’Attaque des Titans', duration: 48 },
+      { type: 'court', icon: '🤠', title: 'Préparer ton personnage RP', duration: 20 },
+      { type: 'court', icon: '☕', title: 'Te faire un café avant le service', duration: 10 },
+      { type: 'court', icon: '🐴', title: 'Préparer ton cheval et ton équipement', duration: 15 }
+    ];
+
+    let remainingMinutes = 0;
+
+    function getTargetTime() {
+      const now = new Date();
+      const target = new Date();
+      target.setHours(openingHour, openingMinute, 0, 0);
+
+      if (now > target) {
+        target.setDate(target.getDate() + 1);
+      }
+      return target;
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const target = getTargetTime();
+      const diff = target - now;
+
+      const totalSeconds = Math.max(0, Math.floor(diff / 1000));
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      remainingMinutes = Math.floor(totalSeconds / 60);
+
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+      const text = `Il reste ${hours}h ${String(minutes).padStart(2, '0')}min avant l'ouverture.`;
+      document.getElementById('countdownText').textContent = text;
+      document.getElementById('watchIntro').textContent = `Avec ${hours}h ${String(minutes).padStart(2, '0')}min devant toi, tu peux regarder :`;
+
+      if (hours === 0 && minutes === 0 && seconds === 0) {
+        document.getElementById('openMessage').style.display = 'block';
+      }
+    }
+
+    function formatDuration(minutes) {
+      const h = Math.floor(minutes / 60);
+      const m = minutes % 60;
+      if (h <= 0) return `${m} min`;
+      if (m === 0) return `${h}h`;
+      return `${h}h${String(m).padStart(2, '0')}`;
+    }
+
+    function shuffle(array) {
+      return array
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value);
+    }
+
+    function renderSuggestions() {
+      const container = document.getElementById('suggestions');
+      container.innerHTML = '';
+
+      const available = watchList
+        .filter(item => item.duration <= Math.max(remainingMinutes, 1))
+        .sort((a, b) => b.duration - a.duration);
+
+      if (!available.length) {
+        container.innerHTML = `<div class="empty">Il reste trop peu de temps pour un épisode complet. Là, c’est plutôt le moment de lancer le jeu, boire un verre d’eau et vérifier ton micro.</div>`;
+        return;
+      }
+
+      const picked = shuffle(available).slice(0, 6).sort((a, b) => b.duration - a.duration);
+
+      picked.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'suggestion';
+        div.innerHTML = `
+          <div class="icon">${item.icon}</div>
+          <div>
+            <strong>${item.title}</strong>
+            <small>${item.type.charAt(0).toUpperCase() + item.type.slice(1)}</small>
+          </div>
+          <div class="duration">${formatDuration(item.duration)}</div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    updateCountdown();
+    renderSuggestions();
+
+    setInterval(() => {
+      const previousMinute = remainingMinutes;
+      updateCountdown();
+      if (remainingMinutes !== previousMinute) renderSuggestions();
+    }, 1000);
+  </script>
+</body>
+</html>

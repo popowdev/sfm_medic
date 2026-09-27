@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquête de satisfaction SAMR</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+      color: #1f2937;
+    }
+
+    p {
+      color: #4b5563;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #374151;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      margin-top: 25px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button[type="submit"]:hover {
+      background: #1d4ed8;
+    }
+
+    /* Pop-up */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-box {
+      background: white;
+      width: 90%;
+      max-width: 420px;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      animation: popupAppear 0.25s ease;
+    }
+
+    .popup-box h2 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .popup-box p {
+      margin: 15px 0 25px;
+      color: #4b5563;
+    }
+
+    .popup-box button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .popup-box button:hover {
+      background: #1d4ed8;
+    }
+
+    @keyframes popupAppear {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Enquête de satisfaction</h1>
+
+    <p>
+      Suite aux annonces du gouvernement, nous envisageons de réévaluer les primes du personnel SAMR.
+      Nous aimerions connaître votre avis concernant le médecin qui vous a pris en charge.
+    </p>
+
+    <form id="surveyForm">
+      <label for="patient">Nom et prénom du patient</label>
+      <input type="text" id="patient" required>
+
+      <label for="doctor">Nom du médecin qui vous a soigné</label>
+      <input type="text" id="doctor" required>
+
+      <label for="note">Sur une note de 1 à 5, combien lui donneriez-vous ?</label>
+      <select id="note" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="1">1 / 5</option>
+        <option value="2">2 / 5</option>
+        <option value="3">3 / 5</option>
+        <option value="4">4 / 5</option>
+        <option value="5">5 / 5</option>
+      </select>
+
+      <label for="prime">Quel montant de prime mérite-t-il selon vous ?</label>
+      <select id="prime" required>
+        <option value="">-- Sélectionner --</option>
+        <option value="50">50 $</option>
+        <option value="100">100 $</option>
+        <option value="200">200 $</option>
+      </select>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('surveyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const popup1 = document.createElement('div');
+      popup1.className = 'popup-overlay';
+      popup1.innerHTML = `
+        <div class="popup-box">
+          <h2>Votre demande a été prise en compte</h2>
+          <p>
+            Les informations ont bien été transmises au service des ressources humaines.
+          </p>
+          <button id="continueBtn">Continuer</button>
+        </div>
+      `;
+
+      document.body.appendChild(popup1);
+
+      document.getElementById('continueBtn').addEventListener('click', function() {
+        popup1.remove();
+
+        const popup2 = document.createElement('div');
+        popup2.className = 'popup-overlay';
+        popup2.innerHTML = `
+          <div class="popup-box">
+            <h2>🐟 Poisson d’avril !</h2>
+            <p>
+              Aucune demande n’a réellement été envoyée.<br><br>
+              Les primes seront finalement remplacées par :
+              <br>• un café gratuit
+              <br>• un stylo SAMR
+              <br>• et nos sincères félicitations
+            </p>
+            <button id="closeBtn">Fermer</button>
+          </div>
+        `;
+
+        document.body.appendChild(popup2);
+
+        document.getElementById('closeBtn').addEventListener('click', function() {
+          popup2.remove();
+        });
+      });
+    });
+</script>
+
+</body>
+</html>

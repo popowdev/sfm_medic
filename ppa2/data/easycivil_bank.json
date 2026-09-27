@@ -1,0 +1,1503 @@
+[
+    {
+        "id": "CIVIL_001",
+        "axis": null,
+        "text": "Vous parlez avec quelqu'un. Vous sentez une montée de stress inhabituelle. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous vous mettez en retrait exprès. Vous gardez ainsi un bon jugement.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous continuez l'échange. Vous faites plus attention à votre attitude.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez vite pour éviter que ça tourne mal.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_002",
+        "axis": null,
+        "text": "Une situation vous semble injuste. Votre premier réflexe est plutôt de :",
+        "answers": {
+            "trap": {
+                "label": "Vous intervenez tout de suite pour remettre les choses d'aplomb.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous notez la situation. Vous attendez avant d'agir.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous pensez qu'il faut agir avec fermeté pour corriger l'injustice.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_003",
+        "axis": null,
+        "text": "Vous êtes sous pression depuis longtemps. En général, vous avez tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Vous simplifiez vos décisions pour rester efficace.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous contrôlez tout de plus près pour éviter les erreurs.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous prenez moins d'initiatives tant que la pression dure.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_004",
+        "axis": null,
+        "text": "Un échange devient flou. Il est difficile à comprendre. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous posez vite des questions pour clarifier la situation.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous observez sans agir pour mieux comprendre ce qui se passe.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous prenez une position ferme pour couper court au doute.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_005",
+        "axis": null,
+        "text": "Un désaccord continue. Vous avez déjà essayé de discuter plusieurs fois. Vous avez plutôt tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous arrêtez l'échange s'il ne mène à rien.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous donnez encore plus d'arguments pour trouver un accord.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous imposez une décision pour clore la situation.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_006",
+        "axis": null,
+        "text": "Vous sentez une tension vague. Vous n'en voyez pas la cause. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous prenez du recul sans chercher à tout expliquer tout de suite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous cherchez activement d'où vient le malaise.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous changez d'attitude pour vous préparer à un risque.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_007",
+        "axis": null,
+        "text": "Quelqu'un vous contredit sans arrêt. D'habitude, vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous gardez le dialogue pour vous comprendre à nouveau.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous réduisez peu à peu l'échange pour éviter que ça monte.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous durcissez votre position pour faire cesser l'opposition.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_008",
+        "axis": null,
+        "text": "Vos émotions montent très fort. Vous avez plutôt tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Suivre votre instinct pour décider tout de suite.",
+                "score": 0
+            },
+            "good": {
+                "label": "Voir que vous êtes secoué. Attendre avant de prendre une décision importante.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Faire un gros effort pour rester logique.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_009",
+        "axis": null,
+        "text": "Vous sentez que vous perdez un peu le contrôle. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous organiser davantage pour éviter les surprises.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Accepter de ne pas tout savoir, pour le moment.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Forcer une décision pour reprendre le contrôle.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_010",
+        "axis": null,
+        "text": "On vous fait une critique qui vous semble injustifiée. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Prendre du recul avant de répondre.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous justifier pour défendre votre point de vue.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Rejeter la critique en bloc, tout de suite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_011",
+        "axis": null,
+        "text": "Quelqu'un agit d'une façon que vous ne comprenez pas tout de suite. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Demander vite une explication.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Penser tout de suite que c'est un problème.",
+                "score": 0
+            },
+            "good": {
+                "label": "Observer la suite avant de vous faire un avis.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_012",
+        "axis": null,
+        "text": "La situation est très tendue. En général, votre priorité est de :",
+        "answers": {
+            "bad": {
+                "label": "Faire baisser la tension par une action forte, tout de suite.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Garder un cadre clair pour éviter les débordements.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Rester calme à l'intérieur.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_013",
+        "axis": null,
+        "text": "Vous ressentez une frustration qui dure. Vous avez plutôt tendance à :",
+        "answers": {
+            "good": {
+                "label": "Repérer cette frustration sans agir tout de suite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Dire ce que vous ressentez, mais avec calme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Transformer cette frustration en action tout de suite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_014",
+        "axis": null,
+        "text": "La situation peut se comprendre de plusieurs façons. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Choisir l'explication la plus logique pour agir.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Attendre d'avoir plus d'infos avant de vous décider.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Choisir une lecture prudente, mais sur la défensive.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_015",
+        "axis": null,
+        "text": "Quelqu'un remet en cause ce que vous dites. Vous avez plutôt tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Camper sur votre position pour montrer que vous avez raison.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Expliquer votre point de vue pour être clair.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Accepter ce ressenti. Vous ne réagissez pas tout de suite.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_016",
+        "axis": null,
+        "text": "La tension monte peu à peu. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Prendre du recul avant que ça empire.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Rester présent pour éviter que ça monte.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Agir de façon directe pour reprendre le contrôle.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_017",
+        "axis": null,
+        "text": "Vous sentez que l'échange n'est pas équilibré. Le plus souvent, vous :",
+        "answers": {
+            "trap": {
+                "label": "Cherchez à remettre l'échange d'aplomb.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Prenez du recul pour ne pas réagir à chaud.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Corrigez la situation par un geste ferme.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_018",
+        "axis": null,
+        "text": "Une situation sociale vous met mal à l'aise. Il n'y a pas de danger. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous éloigner peu à peu, sans conflit.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous raidir à l'avance, par précaution.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Rester là pour comprendre d'où vient la gêne.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_019",
+        "axis": null,
+        "text": "Une pression extérieure dure dans le temps. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous adapter pour répondre aux attentes.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Revoir vos priorités et lever le pied.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Décider plus vite pour faire cesser la pression.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_020",
+        "axis": null,
+        "text": "Un échange vous paraît confus. Vous êtes plutôt porté à :",
+        "answers": {
+            "good": {
+                "label": "Observer sans agir tout de suite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Clarifier la situation, avec calme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Trancher vite pour couper court à la confusion.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_021",
+        "axis": null,
+        "text": "Vous sentez que votre patience baisse. D'habitude, vous :",
+        "answers": {
+            "bad": {
+                "label": "Coupez court avec une réponse directe.",
+                "score": 0
+            },
+            "good": {
+                "label": "Réduisez les échanges pour éviter de déborder.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Restez présent en maîtrisant votre agacement.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_022",
+        "axis": null,
+        "text": "Vous vous sentez observé ou jugé. Que faites-vous ?",
+        "answers": {
+            "trap": {
+                "label": "Vous adaptez votre attitude à la situation.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous adoptez une attitude plus sûre de vous.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous notez ce ressenti. Vous ne changez rien à votre attitude.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_023",
+        "axis": null,
+        "text": "Une situation reste floue longtemps. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous acceptez le flou. Vous n'agissez pas trop vite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous faites de petites actions en attendant.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous forcez une solution pour être soulagé.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_024",
+        "axis": null,
+        "text": "Vos émotions et votre raison ne sont pas d'accord. Que faites-vous ?",
+        "answers": {
+            "trap": {
+                "label": "Vous cherchez tout de suite un compromis entre les deux.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous prenez le temps d'y voir clair.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous suivez l'émotion la plus forte.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_025",
+        "axis": null,
+        "text": "Votre stress monte peu à peu. Que faites-vous ?",
+        "answers": {
+            "bad": {
+                "label": "Vous agissez plus vite pour que ça s'arrête.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous organisez mieux vos actions.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous vous éloignez de ce qui vous stresse.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_026",
+        "axis": null,
+        "text": "Une relation est tendue. Que faites-vous en général ?",
+        "answers": {
+            "good": {
+                "label": "Vous restez en retrait pour éviter que ça monte.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous gardez un échange calme et maîtrisé.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous imposez des règles strictes pour reprendre le contrôle.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_027",
+        "axis": null,
+        "text": "Vous sentez une pression pour agir vite. Que faites-vous ?",
+        "answers": {
+            "trap": {
+                "label": "Vous réfléchissez plus vite pour répondre à la pression.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez tout de suite pour faire baisser la tension.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous résistez à la pression. Vous attendez avant d'agir.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_028",
+        "axis": null,
+        "text": "Pendant un échange, vous supportez de moins en moins. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous écourtez ou calmez l'échange exprès.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous continuez l'échange en gardant votre calme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous bâclez la fin pour que ça s'arrête vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_029",
+        "axis": null,
+        "text": "Quelqu'un vous critique sans le dire clairement. Le plus souvent, vous :",
+        "answers": {
+            "trap": {
+                "label": "Vous expliquez votre point de vue pour clarifier.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous vous braquez pour ne pas perdre la face.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous acceptez ce ressenti. Vous ne changez rien tout de suite.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_030",
+        "axis": null,
+        "text": "Vous sentez une tension. Mais rien de précis ne l'a causée. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous restez attentif. Vous n'intervenez pas trop.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous cherchez d'où vient le problème.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous changez d'attitude pour éviter un conflit à venir.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_031",
+        "axis": null,
+        "text": "Plusieurs personnes ne sont pas d'accord entre elles. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous intervenez pour guider vers une réponse claire.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous acceptez ces désaccords pour le moment.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous tranchez net pour cadrer la discussion.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_032",
+        "axis": null,
+        "text": "Vous sentez que vous écoutez de moins en moins bien. Vous avez tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Vous répondez sec pour finir plus vite.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous continuez en vous concentrant sur l'essentiel.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous faites une pause pour ne pas mal répondre.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_033",
+        "axis": null,
+        "text": "Une relation vous semble instable. Votre premier réflexe est de :",
+        "answers": {
+            "good": {
+                "label": "Vous observez. Vous ne cherchez pas à tout calmer tout de suite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous intervenez avec mesure pour calmer la situation.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous imposez des règles pour remettre de l'ordre.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_034",
+        "axis": null,
+        "text": "Quelqu'un vous met une forte pression. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous faites avec. Vous adaptez votre comportement.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous prenez du recul pour rester stable.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous décidez vite pour que la pression s'arrête.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_035",
+        "axis": null,
+        "text": "Vous ne savez pas comment la situation va finir. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous acceptez de ne pas savoir. Vous n'agissez pas tout de suite.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous forcez une direction pour être moins mal à l'aise.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous agissez petit à petit pour tester.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_036",
+        "axis": null,
+        "text": "Parfois, votre ressenti et vos idées ne vont pas dans le même sens. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous cherchez vite à mettre les deux d'accord.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous prenez le temps avant d'agir.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous suivez ce qui est le plus fort en vous.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_037",
+        "axis": null,
+        "text": "Vous sentez qu'on vous juge. D'habitude, vous avez tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Vous vous montrez plus sûr de vous pour vous protéger.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous remarquez ce ressenti. Vous ne changez rien à votre attitude.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous adaptez un peu votre comportement à la situation.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_038",
+        "axis": null,
+        "text": "Vous sentez l'agacement monter petit à petit. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous continuez l'échange en gardant votre calme.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous parlez moins pour ne pas déborder.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous coupez court avec une réponse sèche.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_039",
+        "axis": null,
+        "text": "Plusieurs sources de stress s'accumulent. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous en faites moins pour lever le pied.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous vous organisez mieux pour rester efficace.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous allez plus vite pour tout gérer d'un coup.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_040",
+        "axis": null,
+        "text": "Vous sentez que vous perdez peu à peu le contrôle de vos émotions. Votre réflexe est de :",
+        "answers": {
+            "bad": {
+                "label": "Vous agissez vite pour reprendre le contrôle.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous vous forcez à rester discipliné.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous prenez du recul pour vous calmer.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_041",
+        "axis": null,
+        "text": "Un échange vous met mal à l'aise depuis un moment. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous vous retirez peu à peu, sans conflit.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous cherchez d'où vient ce malaise.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous changez d'attitude pour éviter un danger.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_042",
+        "axis": null,
+        "text": "On attend une réponse de vous, et vite. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous réfléchissez plus vite pour répondre.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez vite pour faire baisser la pression.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous gardez votre rythme habituel malgré la pression.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_043",
+        "axis": null,
+        "text": "Parfois, les règles ne sont pas dites clairement. Dans ce cas, vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous regardez la situation. Puis vous adaptez votre attitude.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous cherchez à comprendre ces règles.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous imposez vos propres règles.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_044",
+        "axis": null,
+        "text": "Vous sentez le stress monter. Mais rien n'est urgent. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous vous préparez à d'éventuels soucis.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous ralentissez pour ne pas être débordé.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous accélérez pour faire baisser ce stress.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_045",
+        "axis": null,
+        "text": "Vous êtes avec des gens depuis longtemps. Cela vous fatigue. Le plus souvent, vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous participez de moins en moins, tout doucement.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous partez d'un coup, sans prévenir.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous restez présent en vous forçant.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_046",
+        "axis": null,
+        "text": "Vous sentez une forte envie d'agir tout de suite. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous transformez cette envie en action réfléchie.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous résistez et vous attendez avant d'agir.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous cédez tout de suite pour vous soulager.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_047",
+        "axis": null,
+        "text": "Vos repères habituels sont bousculés. Vous avez tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Vous défendez vos idées avec force.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous cherchez vite de nouveaux repères.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous acceptez le doute. Vous ne réagissez pas tout de suite.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_048",
+        "axis": null,
+        "text": "Vous sentez une fatigue qui monte doucement en vous. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous voyez moins les autres pour garder de l'énergie.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous tenez vos engagements, mais vous changez votre attitude.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous accélérez pour en finir plus vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_049",
+        "axis": null,
+        "text": "Vous n'arrivez pas à deviner ce que l'autre veut vraiment. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous posez la question directement pour comprendre.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous observez sans tirer de conclusion trop vite.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous imaginez un danger et vous changez d'attitude.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_050",
+        "axis": null,
+        "text": "Vous sentez une pression. Vous devez réussir ou convaincre. Votre premier réflexe, c'est de :",
+        "answers": {
+            "bad": {
+                "label": "Imposer votre avis en force pour qu'on vous écoute.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Mieux organiser ce que vous dites.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous impliquer moins, pour rester fidèle à vous-même.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_051",
+        "axis": null,
+        "text": "Un échange dure longtemps. Il vous met sous tension. Vous avez plutôt tendance à :",
+        "answers": {
+            "good": {
+                "label": "Faire une pause. Ou vous retirer petit à petit.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Rester là, mais garder le contrôle de vos réactions.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Couper court avec une réponse sèche.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_052",
+        "axis": null,
+        "text": "On vous comprend mal, encore et encore. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Expliquer encore et encore pour vous faire comprendre.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Accepter ce malentendu. Sans vouloir le corriger tout de suite.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous braquer pour bien réaffirmer votre avis.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_053",
+        "axis": null,
+        "text": "Une situation ne répond pas à vos attentes. Le plus souvent, vous :",
+        "answers": {
+            "good": {
+                "label": "Revoyez vos attentes avant d'agir.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Dites votre déception, avec calme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Faites tout pour corriger la situation vous-même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_054",
+        "axis": null,
+        "text": "Vous ressentez une urgence en vous. Pourtant, rien dehors ne vous presse vraiment. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Transformer cette urgence en une action bien organisée.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Agir vite pour faire disparaître ce ressenti.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous demander d'où vient cette urgence, avant d'agir.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_055",
+        "axis": null,
+        "text": "Dans une relation, les signaux se contredisent. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Accepter cette contradiction. Sans vouloir la régler tout de suite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Choisir l'explication la plus logique, puis agir.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous mettre sur la défensive, par prudence.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_056",
+        "axis": null,
+        "text": "Votre patience est mise à l'épreuve. Ça dépasse votre limite habituelle. Vous avez plutôt tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Réagir plus sèchement pour écourter la situation.",
+                "score": 0
+            },
+            "good": {
+                "label": "Vous impliquer moins, pour éviter une mauvaise réaction.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Continuer l'échange, en gardant le contrôle de votre agacement.",
+                "score": 0.5
+            }
+        }
+    },
+    {
+        "id": "CIVIL_057",
+        "axis": null,
+        "text": "Votre rôle n'est pas clair dans une situation. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous observez d'abord. Vous agissez ensuite.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous intervenez pour rendre votre rôle plus clair.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous fixez vous-même votre rôle en agissant.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_058",
+        "axis": null,
+        "text": "Beaucoup de demandes arrivent en même temps. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous triez vite pour répondre à chacune.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous traitez moins de demandes à la fois.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous répondez à tout pour ne pas rater.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_059",
+        "axis": null,
+        "text": "Peu à peu, vous vous sentez débordé. Votre réflexe est de :",
+        "answers": {
+            "good": {
+                "label": "Vous prenez de la distance pour vous apaiser.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous posez des limites claires.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous réagissez de façon brusque.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_060",
+        "axis": null,
+        "text": "Vos valeurs ne collent pas avec la situation. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous essayez d'adapter la situation à vos valeurs.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous prenez du recul avant d'agir.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous refusez la situation de façon directe.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_061",
+        "axis": null,
+        "text": "Dans un échange, le rythme ne vous convient pas. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous vous adaptez à ce rythme sans forcer.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous essayez de changer le rythme de l'échange.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous imposez votre rythme.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_062",
+        "axis": null,
+        "text": "Vous sentez une pression discrète pour réagir. Vous avez tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Vous réagissez vite pour répondre à l'attente.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Vous donnez une réponse partielle.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous résistez. Vous attendez avant de répondre.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_063",
+        "axis": null,
+        "text": "La tension est floue mais elle dure. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous vous éloignez un peu de cette situation.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Vous restez présent pour comprendre d'où vient la tension.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous cherchez à forcer une explication.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_064",
+        "axis": null,
+        "text": "On attend trop de vous. Vous trouvez ça excessif. En général, vous réagissez comment ?",
+        "answers": {
+            "trap": {
+                "label": "Vous discutez pour ajuster la demande.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous revoyez ce que vous faites, sans conflit.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Vous refusez, de façon directe.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_065",
+        "axis": null,
+        "text": "Une situation vous met sous tension. Et ça dure. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Vous retirer peu à peu, pour garder votre équilibre.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Rester, par sens du devoir.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Tout arrêter, d'un coup.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_066",
+        "axis": null,
+        "text": "Vous sentez un malaise à l'intérieur. Et il dure. Vous avez plutôt tendance à :",
+        "answers": {
+            "good": {
+                "label": "Laisser du temps à ce malaise avant d'agir.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Chercher vite une solution concrète.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Agir juste pour faire taire ce malaise.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_067",
+        "axis": null,
+        "text": "On pousse vos limites, encore et encore. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Poser vos limites de façon plus ferme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Devenir plus rigide.",
+                "score": 0
+            },
+            "good": {
+                "label": "En faire moins, pour protéger vos limites.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_068",
+        "axis": null,
+        "text": "On vous en demande de plus en plus. Vous vous sentez débordé. Vous préférez :",
+        "answers": {
+            "good": {
+                "label": "Ralentir et revoir vos priorités.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Garder le rythme, en vous organisant mieux.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Continuer sans rien changer.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_069",
+        "axis": null,
+        "text": "Vous avez peu de marge pour agir. Vous avez tendance à :",
+        "answers": {
+            "bad": {
+                "label": "Forcer une solution pour reprendre le contrôle.",
+                "score": 0
+            },
+            "trap": {
+                "label": "Chercher activement les options possibles.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Accepter cette contrainte, pour le moment.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_070",
+        "axis": null,
+        "text": "Vous ressentez un fort besoin que ça se termine. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Pousser l'échange vers une fin.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous demander d'où vient ce besoin, avant d'agir.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Couper court, d'un coup.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_071",
+        "axis": null,
+        "text": "Vous vous sentez au bout de vos forces. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Alléger votre charge pour ne pas craquer.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Tenir bon avec l'énergie qu'il vous reste.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Forcer encore plus, au-delà de vos limites.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_072",
+        "axis": null,
+        "text": "Une situation vous gêne depuis longtemps. Le plus souvent, vous :",
+        "answers": {
+            "trap": {
+                "label": "Essayez de vous adapter, petit à petit.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Vous retirez, après avoir bien réfléchi.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Coupez court d'un coup, sans détour.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_073",
+        "axis": null,
+        "text": "Votre jugement est moins clair que d'habitude. Vous avez tendance à :",
+        "answers": {
+            "good": {
+                "label": "Attendre avant de prendre une décision importante.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Faire un gros effort pour rester logique.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Suivre votre première impression tout de suite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_074",
+        "axis": null,
+        "text": "De petites tensions s'accumulent. Vous avez plutôt tendance à :",
+        "answers": {
+            "good": {
+                "label": "Alléger ce qui vous entoure pour ne pas être débordé.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Régler chaque tension une par une.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Ignorer ces tensions jusqu'à ce que ça déborde.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_075",
+        "axis": null,
+        "text": "Vos repères habituels ne marchent plus. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Vous refaire vite de nouveaux repères.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous accrocher fort aux anciens repères.",
+                "score": 0
+            },
+            "good": {
+                "label": "Accepter ce moment de doute.",
+                "score": 1
+            }
+        }
+    },
+    {
+        "id": "CIVIL_076",
+        "axis": null,
+        "text": "Une contrainte dure depuis longtemps. Le plus souvent, vous :",
+        "answers": {
+            "good": {
+                "label": "Adaptez vos efforts, petit à petit.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Faites avec, sans changer votre rythme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Cherchez à casser la contrainte en agissant.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_077",
+        "axis": null,
+        "text": "Vous sentez que vous perdez votre liberté d'agir. Vous avez tendance à :",
+        "answers": {
+            "trap": {
+                "label": "Discuter pour retrouver un peu de marge.",
+                "score": 0.5
+            },
+            "good": {
+                "label": "Accepter cette perte pour un temps, sans réagir tout de suite.",
+                "score": 1
+            },
+            "bad": {
+                "label": "Réagir tout de suite pour reprendre votre liberté.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_078",
+        "axis": null,
+        "text": "Vous sentez le stress monter. C'est trop pour vous. Que faites-vous en priorité ?",
+        "answers": {
+            "good": {
+                "label": "Je fais une pause pour souffler avant de décider.",
+                "score": 1
+            },
+            "trap": {
+                "label": "Je continue mes tâches, mais je ralentis un peu.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Je force pour tenir jusqu'au bout.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "CIVIL_079",
+        "axis": null,
+        "text": "Vous sentez que vous avez atteint votre limite. Que faites-vous souvent ?",
+        "answers": {
+            "trap": {
+                "label": "Je cherche à m'arranger tout de suite.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "J'ignore ma limite et je continue.",
+                "score": 0
+            },
+            "good": {
+                "label": "Je respecte ma limite. J'adapte ce que je fais.",
+                "score": 1
+            }
+        }
+    }
+]

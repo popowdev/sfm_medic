@@ -1,0 +1,1370 @@
+[
+  {
+    "id": "Q001",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : présence de tiers] – Une personne vous provoque verbalement à répétition pendant une intervention. Quelle est votre priorité immédiate ?",
+    "answers": {
+      "good": {
+        "label": "Réguler votre état interne et réduire l’intensité avant toute action.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Recadrer verbalement pour rétablir rapidement un cadre.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer une autorité visible pour couper court.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q002",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : environnement public] – Après une remarque humiliant votre uniforme, comment vous repositionnez-vous mentalement ?",
+    "answers": {
+      "good": {
+        "label": "Vous recentrez sur la mission et la sécurité, sans personnaliser.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous expliquez votre rôle pour calmer l’échange.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous cherchez à reprendre l’ascendant pour restaurer votre statut.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q003",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : fatigue en fin de service] – Votre voix commence à monter sous stress. Que faites-vous ?",
+    "answers": {
+      "good": {
+        "label": "Vous ralentissez, baissez le volume et reprenez une respiration contrôlée.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous continuez en restant ferme, sans changer votre rythme.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous haussez le ton pour imposer un arrêt immédiat.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q004",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : informations incomplètes] – Vous ressentez de la colère suite à une résistance passive. Votre réflexe est plutôt de :",
+    "answers": {
+      "good": {
+        "label": "Identifier la colère et revenir à des consignes simples et neutres.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester très direct pour obtenir une réponse claire.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accélérer la contrainte pour conclure rapidement.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q005",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : informations incomplètes] – Un collègue commet une maladresse en public et vous agace. Votre réaction :",
+    "answers": {
+      "good": {
+        "label": "Vous gardez votre calme, sécurisez, et débriefez plus tard.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous corrigez sur le moment de façon courte et factuelle.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous le recadrez sèchement devant tout le monde.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q006",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : contrainte de temps] – Un témoin vous filme de très près. Vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Rester centré sur le cadre légal et la sécurité, sans jouer l’image.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Adapter votre communication pour rassurer le public.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accentuer votre autorité pour éviter d’être discrédité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q007",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : présence de tiers] – Après un incident stressant, comment gérez-vous la fin d’intervention ?",
+    "answers": {
+      "good": {
+        "label": "Vous revenez au neutre, vérifiez les faits, puis débriefez calmement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous restez sur une posture de contrôle modéré par prudence.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous maintenez une posture dominante pour éviter toute reprise.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q008",
+    "axis": "controle_emotionnel",
+    "text": "[Contexte : présence de tiers] – On vous insulte sans menace physique. Votre réponse la plus probable :",
+    "answers": {
+      "good": {
+        "label": "Ne pas réagir à l’émotion et rester sur le factuel.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Répondre calmement pour tenter de faire cesser les insultes.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Couper court en reprenant l’ascendant.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q009",
+    "axis": "desescalade",
+    "text": "[Contexte : situation routinière] – Face à une personne agitée mais non violente, votre approche privilégiée est :",
+    "answers": {
+      "good": {
+        "label": "Créer de la distance, réduire les stimulations et abaisser la tension progressivement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Poser immédiatement un cadre verbal ferme.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Prendre le contrôle physique pour prévenir une dérive.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q010",
+    "axis": "desescalade",
+    "text": "[Contexte : environnement public] – Une discussion s’envenime entre deux civils. Votre première action :",
+    "answers": {
+      "good": {
+        "label": "Séparer les personnes et calmer la scène avant de questionner.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Demander qui a commencé et exiger une réponse.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Menacer de sanctions immédiates pour stopper net.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q011",
+    "axis": "desescalade",
+    "text": "[Contexte : environnement public] – Vous sentez que l’autre bascule émotionnellement. Vous privilégiez :",
+    "answers": {
+      "good": {
+        "label": "Parler plus lentement, donner des options simples, et laisser du temps.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Recadrer verbalement pour stabiliser.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Augmenter la pression pour obtenir une conformité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q012",
+    "axis": "desescalade",
+    "text": "[Contexte : présence de tiers] – Une personne refuse de s’asseoir mais reste non menaçante. Vous faites :",
+    "answers": {
+      "good": {
+        "label": "Proposer une alternative équivalente et maintenir la distance.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Insister pour qu’elle s’asseye afin de reprendre le contrôle.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Forcer l’exécution pour éviter que ça traîne.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q013",
+    "axis": "desescalade",
+    "text": "[Contexte : informations incomplètes] – La situation se calme et la coopération augmente. Vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Réduire immédiatement l’intensité et revenir à une posture neutre.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir une vigilance modérée jusqu’à la fin.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Conserver un contrôle élevé pour éviter la reprise.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q014",
+    "axis": "desescalade",
+    "text": "[Contexte : informations incomplètes] – Une personne anxieuse hyperventile. Votre priorité :",
+    "answers": {
+      "good": {
+        "label": "Réduire les stimulations, instaurer une distance et un ton bas.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Poser des limites verbales claires immédiatement.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Mettre fin à l’échange par une injonction ferme.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q015",
+    "axis": "desescalade",
+    "text": "[Contexte : environnement public] – Un groupe s’attroupe et commente. Votre conduite :",
+    "answers": {
+      "good": {
+        "label": "Créer un périmètre, communiquer brièvement, puis revenir à la désescalade.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Recadrer le groupe pour reprendre l’attention.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer une autorité visible pour disperser vite.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q016",
+    "axis": "desescalade",
+    "text": "[Contexte : informations incomplètes] – Une personne coopère partiellement après tension. Vous choisissez :",
+    "answers": {
+      "good": {
+        "label": "Encourager la coopération et ajuster votre posture à la baisse.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir votre posture jusqu’à coopération complète.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Durcir pour obtenir une conformité totale.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q017",
+    "axis": "proportionnalite",
+    "text": "[Contexte : situation routinière] – Dans l’évaluation de la proportionnalité, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Réévaluer en continu la menace et réduire le niveau de réponse dès que possible.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Garder le même niveau de réponse jusqu’à la fin claire.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Choisir une réponse supérieure pour éviter tout retournement.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q018",
+    "axis": "proportionnalite",
+    "text": "[Contexte : informations incomplètes] – Un suspect recule et lève les mains. Votre posture :",
+    "answers": {
+      "good": {
+        "label": "Baisser d’un cran tout en gardant la sécurité.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester au même niveau jusqu’au contrôle complet.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Durcir pour verrouiller la scène.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q019",
+    "axis": "proportionnalite",
+    "text": "[Contexte : situation instable] – Une opposition passive ralentit l’intervention. Vous privilégiez :",
+    "answers": {
+      "good": {
+        "label": "Le temps, des options simples, et une progression graduée.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Insister verbalement pour obtenir une réponse.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Forcer une issue rapide pour éviter que ça traîne.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q020",
+    "axis": "proportionnalite",
+    "text": "[Contexte : fatigue en fin de service] – Votre collègue propose une réponse plus ferme que nécessaire. Votre réflexe :",
+    "answers": {
+      "good": {
+        "label": "Revenir au niveau minimal requis et documenter.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Accepter la fermeté pour sécuriser l’intervention.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Soutenir la fermeté afin d’imposer une issue.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q021",
+    "axis": "proportionnalite",
+    "text": "[Contexte : environnement public] – L’usage de la force devient envisageable. Vous cherchez d’abord :",
+    "answers": {
+      "good": {
+        "label": "Des alternatives et la désescalade tant que possible.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Une pression contrôlée pour obtenir un résultat.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Une action rapide pour éviter l’échec.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q022",
+    "axis": "proportionnalite",
+    "text": "[Contexte : contrainte de temps] – Une personne se conforme mais lentement. Vous faites :",
+    "answers": {
+      "good": {
+        "label": "Accompagner la conformité et réduire la contrainte au fur et à mesure.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester ferme jusqu’à exécution complète.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accélérer la contrainte pour gagner du temps.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q023",
+    "axis": "proportionnalite",
+    "text": "[Contexte : situation routinière] – Après immobilisation, la personne se calme. Vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Relâcher progressivement selon la sécurité et réévaluer.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir l’immobilisation un peu plus par prudence.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Maintenir une contrainte forte pour prévenir tout risque.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q024",
+    "axis": "proportionnalite",
+    "text": "[Contexte : pression hiérarchique] – Un désaccord verbal monte, mais pas de menace. Votre choix :",
+    "answers": {
+      "good": {
+        "label": "Rester au verbal, limiter les gestes et garder une distance.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Adopter une posture dissuasive visible.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Prendre l’initiative physique pour prévenir tout débordement.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q025",
+    "axis": "incertitude",
+    "text": "[Contexte : fatigue en fin de service] – Face à une menace perçue mais non confirmée, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Maintenir une vigilance discrète et chercher des éléments avant de conclure.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Approcher pour clarifier rapidement la situation.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Adopter une posture dissuasive pour prévenir un risque.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q026",
+    "axis": "incertitude",
+    "text": "[Contexte : contrainte de temps] – Vous n’avez qu’une description partielle d’un suspect. Votre conduite :",
+    "answers": {
+      "good": {
+        "label": "Élargir la recherche d’indices et éviter de conclure trop vite.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Interpeller la personne la plus proche du signalement.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir sur l’hypothèse la plus inquiétante immédiatement.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q027",
+    "axis": "incertitude",
+    "text": "[Contexte : informations incomplètes] – Un bruit suspect derrière une porte, aucune confirmation. Vous :",
+    "answers": {
+      "good": {
+        "label": "Sécurisez la zone, demandez des renforts si besoin, et observez.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Ouvrez pour vérifier rapidement.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Forcez l’entrée pour supprimer l’incertitude.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q028",
+    "axis": "incertitude",
+    "text": "[Contexte : pression hiérarchique] – Deux témoins donnent des versions contradictoires. Vous :",
+    "answers": {
+      "good": {
+        "label": "Collectez, comparez, et vérifiez avant décision.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Choisissez la version la plus plausible pour avancer.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Prenez une décision ferme pour reprendre la main.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q029",
+    "axis": "incertitude",
+    "text": "[Contexte : présence de tiers] – Vous hésitez sur la légalité d’une action dans l’instant. Vous :",
+    "answers": {
+      "good": {
+        "label": "Suspendre l’action et demander confirmation/procédure.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Continuer en ajustant au fur et à mesure.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Compenser en renforçant l’action pour éviter une erreur de contrôle.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q030",
+    "axis": "incertitude",
+    "text": "[Contexte : présence de tiers] – Une situation semble 'bizarre' sans indicateur clair. Vous :",
+    "answers": {
+      "good": {
+        "label": "Distinguez inconfort et danger, et cherchez des indicateurs objectifs.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Prenez l’hypothèse la plus probable et agissez.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Anticipez le pire et ajustez votre posture au maximum.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q031",
+    "axis": "incertitude",
+    "text": "[Contexte : situation routinière] – Vous devez décider vite avec des infos incomplètes. Vous :",
+    "answers": {
+      "good": {
+        "label": "Appliquez un principe minimaliste et réversible.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Choisissez une solution intermédiaire pour éviter l’inaction.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Tranchez fort pour éliminer l’incertitude.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q032",
+    "axis": "incertitude",
+    "text": "[Contexte : présence de tiers] – Une personne coopère mais vous suspectez un piège sans preuve. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez prudent, observez, et ajustez selon les signaux réels.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Gardez une posture élevée jusqu’à la fin.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Durcissez immédiatement pour prévenir toute surprise.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q033",
+    "axis": "pression",
+    "text": "[Contexte : pression hiérarchique] – Sous contrainte de temps, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Ralentir vos décisions et vous appuyer sur des repères procéduraux simples.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Compter sur votre maîtrise pour continuer au même rythme.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accélérer pour reprendre le contrôle de la scène.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q034",
+    "axis": "pression",
+    "text": "[Contexte : pression hiérarchique] – Vous êtes observé par des civils et la scène attire l’attention. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez centré sur la sécurité et le cadre légal, sans surjouer.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Communiquez davantage pour donner un cadre au public.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Renforcez votre autorité pour éviter d’être remis en cause.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q035",
+    "axis": "pression",
+    "text": "[Contexte : fatigue en fin de service] – Un supérieur vous presse de conclure vite. Votre réaction :",
+    "answers": {
+      "good": {
+        "label": "Vous rappelez les étapes essentielles et maintenez un minimum procédural.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous accélérez certaines étapes non critiques.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous exécutez rapidement, quitte à réduire les vérifications.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q036",
+    "axis": "pression",
+    "text": "[Contexte : environnement public] – Un collègue vous pousse à 'faire un exemple'. Vous :",
+    "answers": {
+      "good": {
+        "label": "Refusez l’escalade et restez sur le niveau minimal requis.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Acceptez un recadrage verbal ferme.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Soutenez une action plus ferme pour imposer une issue.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q037",
+    "axis": "pression",
+    "text": "[Contexte : situation instable] – Un média/streamer RP vous suit. Vous :",
+    "answers": {
+      "good": {
+        "label": "Gardez une posture neutre et un langage factuel.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Expliquez davantage pour éviter les malentendus.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Adoptez une posture plus autoritaire pour contrôler l’image.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q038",
+    "axis": "pression",
+    "text": "[Contexte : présence de tiers] – On vous interrompt sans cesse pendant que vous recueillez des infos. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez patient, structurez, et reprenez calmement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Coupez les interruptions par un recadrage direct.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Haussez le ton pour imposer le silence.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q039",
+    "axis": "pression",
+    "text": "[Contexte : situation routinière] – Un attroupement rend la communication difficile. Vous :",
+    "answers": {
+      "good": {
+        "label": "Simplifiez, donnez une consigne courte, puis revenez à la désescalade.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Discutez pour obtenir l’adhésion du groupe.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposez une dispersion immédiate par autorité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q040",
+    "axis": "pression",
+    "text": "[Contexte : présence de tiers] – Vous devez faire un choix rapidement sans renfort. Vous :",
+    "answers": {
+      "good": {
+        "label": "Choisissez l’option la plus sûre et réversible.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Choisissez une option intermédiaire pour avancer.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Choisissez l’option la plus forte pour verrouiller.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q041",
+    "axis": "ego_autorite",
+    "text": "[Contexte : fatigue en fin de service] – Lorsqu’on conteste votre légitimité, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Ne pas personnaliser et recentrer sur les faits et la sécurité.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Argumenter afin d’obtenir l’adhésion.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Renforcer votre position pour préserver votre autorité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q042",
+    "axis": "ego_autorite",
+    "text": "[Contexte : pression hiérarchique] – Un civil refuse de vous regarder et vous ignore. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez neutre et répétez calmement les consignes essentielles.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Insistez pour obtenir une réponse claire.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Durcissez le ton pour être respecté.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q043",
+    "axis": "ego_autorite",
+    "text": "[Contexte : informations incomplètes] – On vous accuse à tort d’abus. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez factuel, expliquez brièvement, et documentez.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Débattez pour convaincre sur le moment.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Réagissez fermement pour couper la contestation.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q044",
+    "axis": "ego_autorite",
+    "text": "[Contexte : présence de tiers] – Un suspect tente de vous provoquer pour vous faire déraper. Vous :",
+    "answers": {
+      "good": {
+        "label": "Ignorez la provocation et suivez les étapes procédurales.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Recadrez verbalement et passez à autre chose.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Cherchez à reprendre l’ascendant pour ne pas 'perdre la face'.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q045",
+    "axis": "ego_autorite",
+    "text": "[Contexte : environnement public] – Votre collègue est trop dur verbalement. Vous :",
+    "answers": {
+      "good": {
+        "label": "Intervenez pour revenir au factuel et diminuer la tension.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Le laissez faire tant que ça reste légal.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Le soutenez pour montrer une unité d’autorité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q046",
+    "axis": "ego_autorite",
+    "text": "[Contexte : informations incomplètes] – On vous complimente pour 'avoir été dur'. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez modeste et recentrez sur la sécurité et la procédure.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Acceptez le compliment sans commentaire.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous en servez pour justifier des décisions plus fermes.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q047",
+    "axis": "ego_autorite",
+    "text": "[Contexte : fatigue en fin de service] – Vous êtes frustré de ne pas être écouté. Vous :",
+    "answers": {
+      "good": {
+        "label": "Ralentissez, reformulez, et donnez des options simples.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Répétez plus fort pour vous faire entendre.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Menacez de sanctions pour obtenir l’obéissance.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q048",
+    "axis": "ego_autorite",
+    "text": "[Contexte : présence de tiers] – Un civil vous tutoie et se moque. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez calme et gardez l’échange professionnel.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Demandez poliment le vouvoiement et continuez.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposez immédiatement le respect par autorité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q049",
+    "axis": "cooperation",
+    "text": "[Contexte : informations incomplètes] – Une personne coopère mais pose beaucoup de questions. Vous :",
+    "answers": {
+      "good": {
+        "label": "Répondez brièvement et maintenez un climat de coopération.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Évitez les explications et répétez la consigne.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Coupez court et imposez une exécution immédiate.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q050",
+    "axis": "cooperation",
+    "text": "[Contexte : présence de tiers] – Un témoin est hésitant mais de bonne foi. Vous :",
+    "answers": {
+      "good": {
+        "label": "Laissez du temps et proposez un choix simple (oui/non, ici/là).",
+        "score": 1
+      },
+      "trap": {
+        "label": "Insistez verbalement pour obtenir une réponse rapide.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Menacez de conséquences pour accélérer.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q051",
+    "axis": "cooperation",
+    "text": "[Contexte : situation routinière] – Une personne commence à coopérer après un refus. Vous :",
+    "answers": {
+      "good": {
+        "label": "Renforcez positivement et ajustez la pression à la baisse.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Restez ferme jusqu’à la fin de la procédure.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Durcissez pour éviter une rechute.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q052",
+    "axis": "cooperation",
+    "text": "[Contexte : fatigue en fin de service] – Vous devez coordonner avec un collègue stressé. Vous :",
+    "answers": {
+      "good": {
+        "label": "Donnez des consignes simples et vérifiez la compréhension.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Laissez le collègue gérer pour ne pas le froisser.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Prenez le contrôle total sans concertation.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q053",
+    "axis": "cooperation",
+    "text": "[Contexte : situation instable] – Un civil coopère mais agit de façon maladroite. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez patient, donnez des consignes claires et progressives.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Répétez plus fort pour être compris.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Punissez l’erreur par une posture plus ferme.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q054",
+    "axis": "cooperation",
+    "text": "[Contexte : pression hiérarchique] – Vous constatez une incompréhension culturelle/langagière. Vous :",
+    "answers": {
+      "good": {
+        "label": "Simplifiez, utilisez des phrases courtes, vérifiez la compréhension.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Restez sur les mêmes consignes en insistant.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Augmentez la pression pour obtenir une exécution.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q055",
+    "axis": "cooperation",
+    "text": "[Contexte : contrainte de temps] – Une personne coopère mais veut sauver la face. Vous :",
+    "answers": {
+      "good": {
+        "label": "Proposez une issue acceptable sans humiliation inutile.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Restez strict sur la forme pour la discipline.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Faites un exemple pour dissuader les autres.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q056",
+    "axis": "cooperation",
+    "text": "[Contexte : pression hiérarchique] – Vous devez gérer un mineur/jeune adulte paniqué. Vous :",
+    "answers": {
+      "good": {
+        "label": "Rassurez, ralentissez et impliquez un adulte/tiers si possible.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Recadrez fermement pour que ça rentre dans l’ordre.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Menacez de sanctions pour obtenir la conformité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q057",
+    "axis": "jugement",
+    "text": "[Contexte : pression hiérarchique] – Face à une possible erreur de jugement, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Suspendre l’action et vérifier avant de continuer.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Continuer en ajustant au fur et à mesure.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Compenser en renforçant l’action pour ne pas perdre la main.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q058",
+    "axis": "jugement",
+    "text": "[Contexte : informations incomplètes] – Vous repérez une incohérence dans votre propre raisonnement. Vous :",
+    "answers": {
+      "good": {
+        "label": "Vous arrêtez, reformulez le problème et vérifiez les faits.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous continuez mais restez attentif aux signaux.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous appliquez une solution ferme pour éviter de douter.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q059",
+    "axis": "jugement",
+    "text": "[Contexte : fatigue en fin de service] – Vous devez écrire un rapport après une intervention tendue. Vous :",
+    "answers": {
+      "good": {
+        "label": "Restez factuel, précis, et mentionnez les incertitudes.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Écrivez l’essentiel sans trop de détails.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Minimisez les zones grises pour éviter des questions.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q060",
+    "axis": "jugement",
+    "text": "[Contexte : présence de tiers] – Un collègue vous propose de 'ne pas noter' un détail gênant. Vous :",
+    "answers": {
+      "good": {
+        "label": "Refusez et documentez correctement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Notez partiellement pour éviter le conflit.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Acceptez de ne pas mentionner pour préserver l’équipe.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q061",
+    "axis": "jugement",
+    "text": "[Contexte : contrainte de temps] – Vous découvrez après coup que vous aviez tort sur un point. Vous :",
+    "answers": {
+      "good": {
+        "label": "Le reconnaissez et corrigez rapidement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous attendez de voir si quelqu’un le remarque.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous maintenez votre version pour ne pas perdre la face.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q062",
+    "axis": "jugement",
+    "text": "[Contexte : informations incomplètes] – Sur une scène confuse, votre priorité cognitive est :",
+    "answers": {
+      "good": {
+        "label": "Sécuriser, structurer, puis décider sur éléments vérifiés.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Décider vite puis ajuster si besoin.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Décider fort pour reprendre la main.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q063",
+    "axis": "jugement",
+    "text": "[Contexte : contrainte de temps] – Un doute existe sur l’identité de la personne contrôlée. Vous :",
+    "answers": {
+      "good": {
+        "label": "Vérifiez avant toute mesure contraignante.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Contrôlez d’abord puis vérifiez ensuite.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agissez comme si c’était la bonne personne.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q064",
+    "axis": "jugement",
+    "text": "[Contexte : situation instable] – Vous observez une escalade verbale de votre part. Vous :",
+    "answers": {
+      "good": {
+        "label": "Stoppez, reprenez un ton neutre et reformulez.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Continuez mais réduisez un peu l’intensité.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Poussez jusqu’au bout pour conclure.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q065",
+    "axis": "fatigue",
+    "text": "[Contexte : situation routinière] – En fin de service, vous sentez une baisse d’attention. Vous :",
+    "answers": {
+      "good": {
+        "label": "Réduisez les initiatives et suivez strictement les procédures.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Compensez en contrôlant davantage l’environnement.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Allez plus vite pour terminer.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q066",
+    "axis": "fatigue",
+    "text": "[Contexte : fatigue en fin de service] – Après une longue patrouille, vous remarquez de l’irritabilité. Vous :",
+    "answers": {
+      "good": {
+        "label": "Vous signalez mentalement le biais et ralentissez vos décisions.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous vous fiez à votre expérience pour tenir.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous devenez plus ferme pour gagner du temps.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q067",
+    "axis": "fatigue",
+    "text": "[Contexte : informations incomplètes] – Vous avez du mal à traiter plusieurs infos à la fois. Vous :",
+    "answers": {
+      "good": {
+        "label": "Priorisez sécurité, puis une tâche à la fois.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Essayez de tout gérer en même temps.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Prenez une décision forte pour simplifier.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q068",
+    "axis": "fatigue",
+    "text": "[Contexte : pression hiérarchique] – Votre collègue vous indique que vous semblez fatigué. Vous :",
+    "answers": {
+      "good": {
+        "label": "Acceptez le feedback et adaptez votre rythme/procédure.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Répondez que ça va et continuez pareil.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous agacez et imposez votre manière.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q069",
+    "axis": "fatigue",
+    "text": "[Contexte : environnement public] – Vous sentez que vous 'bâclez' les vérifications. Vous :",
+    "answers": {
+      "good": {
+        "label": "Revenez aux étapes essentielles et cochez mentalement chaque point.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Gardez le rythme en espérant que ça passe.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accélérez pour finir et éviter de traîner.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q070",
+    "axis": "fatigue",
+    "text": "[Contexte : informations incomplètes] – Sur une intervention mineure, vous êtes tenté de faire au plus vite. Vous :",
+    "answers": {
+      "good": {
+        "label": "Gardez un minimum procédural malgré la fatigue.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Réduisez légèrement les étapes non critiques.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Ignorez plusieurs étapes pour terminer.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q071",
+    "axis": "fatigue",
+    "text": "[Contexte : environnement public] – La fatigue augmente votre réaction aux insultes. Vous :",
+    "answers": {
+      "good": {
+        "label": "Revenez au factuel et évitez toute personnalisation.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Recadrez verbalement plus fermement que d’habitude.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Coupez court par autorité.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "Q072",
+    "axis": "fatigue",
+    "text": "[Contexte : pression hiérarchique] – Fin de service, la scène devient imprévue. Vous :",
+    "answers": {
+      "good": {
+        "label": "Vous stabilisez, demandez renfort si nécessaire, et restez procédural.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous improvisez une solution intermédiaire.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous prenez une initiative forte pour clore.",
+        "score": 0
+      }
+    }
+  }
+]

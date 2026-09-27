@@ -1,0 +1,1503 @@
+[
+  {
+    "id": "CIVIL_001",
+    "axis": null,
+    "text": "Lorsque vous ressentez une activation émotionnelle inhabituelle dans une interaction sociale, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Réduire volontairement votre engagement afin de préserver votre discernement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir l’échange en structurant davantage votre comportement.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir rapidement pour éviter que la situation ne se dégrade.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_002",
+    "axis": null,
+    "text": "Face à une situation que vous percevez comme injuste, votre premier réflexe est plutôt de :",
+    "answers": {
+      "trap": {
+        "label": "Chercher à rééquilibrer la situation par une intervention immédiate.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Prendre acte de la situation et différer toute réaction.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Considérer qu’une action ferme est nécessaire pour corriger l’injustice.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_003",
+    "axis": null,
+    "text": "Lorsque vous êtes sous pression prolongée, votre manière de fonctionner est généralement de :",
+    "answers": {
+      "bad": {
+        "label": "Simplifier vos décisions pour rester efficace.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Renforcer votre contrôle afin d’éviter les erreurs.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Limiter vos prises d’initiative tant que la pression persiste.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_004",
+    "axis": null,
+    "text": "Quand une interaction devient ambiguë et difficile à interpréter, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Clarifier rapidement la situation par un échange direct.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Observer sans agir afin de mieux comprendre la dynamique.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Adopter une position ferme pour éliminer l’incertitude.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_005",
+    "axis": null,
+    "text": "Lorsqu’un désaccord persiste malgré plusieurs tentatives de discussion, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Suspendre l’échange s’il devient improductif.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Multiplier les arguments pour parvenir à un accord.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer une décision afin de clore la situation.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_006",
+    "axis": null,
+    "text": "Lorsque vous percevez une tension diffuse sans cause claire, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Augmenter votre distance sans interprétation immédiate.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Chercher activement à identifier la source du malaise.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Modifier votre posture pour anticiper un risque.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_007",
+    "axis": null,
+    "text": "Face à une opposition verbale persistante, votre fonctionnement habituel est de :",
+    "answers": {
+      "trap": {
+        "label": "Maintenir le dialogue afin de restaurer une compréhension mutuelle.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Limiter progressivement l’échange pour éviter l’escalade.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Durcir votre position pour mettre fin à la résistance.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_008",
+    "axis": null,
+    "text": "Lorsque vos émotions sont fortement sollicitées, vous avez plutôt tendance à :",
+    "answers": {
+      "bad": {
+        "label": "Vous appuyer sur votre instinct pour trancher.",
+        "score": 0
+      },
+      "good": {
+        "label": "Reconnaître la perturbation et différer toute décision importante.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Redoubler d’efforts pour rester rationnel.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_009",
+    "axis": null,
+    "text": "Lorsque vous avez le sentiment que la situation vous échappe partiellement, votre réaction la plus fréquente est de :",
+    "answers": {
+      "trap": {
+        "label": "Structurer davantage votre action pour limiter l’imprévu.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accepter temporairement l’incertitude sans chercher à la combler.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Forcer une décision afin de reprendre la maîtrise.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_010",
+    "axis": null,
+    "text": "Face à une critique que vous jugez infondée, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Mettre une distance émotionnelle avant toute réponse.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Vous justifier afin de rétablir votre position.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Rejeter la critique de manière catégorique.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_011",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à un comportement que vous ne comprenez pas immédiatement, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Chercher à obtenir une clarification rapide.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Interpréter ce comportement comme potentiellement problématique.",
+        "score": 0
+      },
+      "good": {
+        "label": "Observer l’évolution avant de tirer une conclusion.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_012",
+    "axis": null,
+    "text": "Dans une situation émotionnellement chargée, votre priorité interne est généralement de :",
+    "answers": {
+      "bad": {
+        "label": "Réduire la tension par une action décisive.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Maintenir un cadre clair pour éviter les débordements.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Préserver votre stabilité émotionnelle.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_013",
+    "axis": null,
+    "text": "Lorsque vous ressentez une frustration persistante, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Identifier cette frustration sans agir immédiatement dessus.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Exprimer ce ressenti de manière contrôlée.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Transformer cette frustration en action concrète.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_014",
+    "axis": null,
+    "text": "Face à une situation où plusieurs interprétations sont possibles, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Choisir l’interprétation la plus cohérente pour agir.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Différer votre positionnement tant que les éléments sont incomplets.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Adopter une lecture prudente mais défensive.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_015",
+    "axis": null,
+    "text": "Lorsque vous vous sentez remis en question dans une interaction, vous avez plutôt tendance à :",
+    "answers": {
+      "bad": {
+        "label": "Renforcer votre position pour affirmer votre légitimité.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Argumenter afin de clarifier votre point de vue.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Tolérer ce sentiment sans réagir immédiatement.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_016",
+    "axis": null,
+    "text": "Dans des situations où la tension monte progressivement, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Réduire votre implication avant que la situation ne s’aggrave.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester engagé afin de contenir l’évolution.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Intervenir plus directement pour reprendre le contrôle.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_017",
+    "axis": null,
+    "text": "Lorsque vous percevez un déséquilibre relationnel, votre réaction la plus fréquente est de :",
+    "answers": {
+      "trap": {
+        "label": "Chercher à rétablir un échange plus équilibré.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Prendre du recul pour éviter une réaction émotionnelle.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Corriger la situation par une action ferme.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_018",
+    "axis": null,
+    "text": "Face à une situation sociale inconfortable mais non menaçante, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Vous désengager progressivement sans confrontation.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Adopter une posture plus rigide par anticipation.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Rester présent afin de comprendre l’origine de l’inconfort.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_019",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une pression extérieure persistante, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Vous adapter activement pour répondre aux attentes.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Réévaluer vos priorités et ralentir votre engagement.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Accélérer vos décisions pour faire cesser la pression.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_020",
+    "axis": null,
+    "text": "Face à une interaction que vous percevez comme confuse, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Maintenir une position d’observation sans agir immédiatement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Clarifier la situation par une intervention mesurée.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Prendre une décision afin d’éliminer la confusion.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_021",
+    "axis": null,
+    "text": "Lorsque vous sentez que votre patience diminue, votre réaction habituelle est de :",
+    "answers": {
+      "bad": {
+        "label": "Écourter la situation par une réponse directe.",
+        "score": 0
+      },
+      "good": {
+        "label": "Réduire vos interactions pour éviter un débordement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester impliqué tout en contrôlant votre irritation.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_022",
+    "axis": null,
+    "text": "Dans une situation où vous vous sentez observé ou évalué, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Ajuster votre comportement pour répondre au contexte.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Adopter une posture plus affirmée.",
+        "score": 0
+      },
+      "good": {
+        "label": "Prendre conscience de ce ressenti sans modifier votre conduite.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_023",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une incertitude prolongée, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Tolérer cette incertitude sans agir précipitamment.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Mettre en place des actions intermédiaires.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Forcer une résolution pour sortir de l’inconfort.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_024",
+    "axis": null,
+    "text": "Face à une situation où vos émotions et votre raisonnement semblent entrer en conflit, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Chercher un compromis immédiat entre les deux.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accorder du temps afin de clarifier ce conflit interne.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Suivre l’émotion dominante.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_025",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une montée progressive de stress, vous êtes plutôt enclin à :",
+    "answers": {
+      "bad": {
+        "label": "Agir plus rapidement pour écourter la situation.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Structurer davantage votre comportement.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Réduire votre exposition aux facteurs stressants.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_026",
+    "axis": null,
+    "text": "Dans un contexte relationnel tendu, votre stratégie privilégiée est généralement de :",
+    "answers": {
+      "good": {
+        "label": "Limiter votre engagement afin de prévenir toute escalade.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir un échange contrôlé.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer un cadre strict pour rétablir l’ordre.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_027",
+    "axis": null,
+    "text": "Lorsque vous sentez une pression à agir rapidement, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Accélérer votre raisonnement pour répondre à cette pression.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir sans attendre pour soulager la tension.",
+        "score": 0
+      },
+      "good": {
+        "label": "Résister à cette pression et temporiser.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_028",
+    "axis": null,
+    "text": "Lorsque vous constatez que votre seuil de tolérance diminue au fil d’une interaction, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Réduire volontairement la durée ou l’intensité de l’échange.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir l’interaction en vous efforçant de rester maîtrisé.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accélérer la résolution afin de mettre fin à l’inconfort.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_029",
+    "axis": null,
+    "text": "Face à une situation où vous vous sentez remis en cause de manière indirecte, votre réaction la plus fréquente est de :",
+    "answers": {
+      "trap": {
+        "label": "Chercher à clarifier votre position par des explications.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Renforcer votre posture afin d’éviter toute perte de crédibilité.",
+        "score": 0
+      },
+      "good": {
+        "label": "Tolérer ce ressenti sans ajuster immédiatement votre comportement.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_030",
+    "axis": null,
+    "text": "Lorsque vous percevez une tension latente sans événement déclencheur clair, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Rester attentif tout en limitant votre implication directe.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Explorer activement la situation pour en identifier la cause.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Modifier votre attitude pour anticiper un éventuel conflit.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_031",
+    "axis": null,
+    "text": "Dans un contexte où plusieurs personnes expriment des points de vue divergents, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Intervenir afin d’orienter l’échange vers une issue claire.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accepter la coexistence temporaire de ces divergences.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Prendre position de manière tranchée pour structurer l’échange.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_032",
+    "axis": null,
+    "text": "Lorsque vous sentez que votre capacité d’écoute diminue, vous avez tendance à :",
+    "answers": {
+      "bad": {
+        "label": "Répondre plus directement pour écourter l’échange.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Maintenir l’échange en vous concentrant sur les points essentiels.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Suspendre l’interaction afin d’éviter une réponse inadaptée.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_033",
+    "axis": null,
+    "text": "Face à une situation relationnelle perçue comme instable, votre réflexe principal est de :",
+    "answers": {
+      "good": {
+        "label": "Observer l’évolution sans chercher à la stabiliser immédiatement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Intervenir de manière mesurée pour limiter l’instabilité.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer un cadre afin de rétablir une structure claire.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_034",
+    "axis": null,
+    "text": "Lorsque vous êtes exposé à une pression émotionnelle externe, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Composer avec cette pression en ajustant votre comportement.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Réduire votre exposition pour préserver votre équilibre.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Accélérer vos décisions afin de faire cesser la pression.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_035",
+    "axis": null,
+    "text": "Dans une situation où l’issue vous semble incertaine, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Accepter cette incertitude sans agir immédiatement.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Forcer une orientation afin de réduire l’inconfort.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Initier une action progressive pour tester la situation.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_036",
+    "axis": null,
+    "text": "Lorsque vous ressentez une contradiction entre ce que vous ressentez et ce que vous pensez, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Chercher rapidement une cohérence entre les deux.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accorder du temps à cette contradiction avant d’agir.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Suivre l’élément le plus intense.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_037",
+    "axis": null,
+    "text": "Face à une situation où vous avez le sentiment d’être évalué, votre réaction habituelle est de :",
+    "answers": {
+      "bad": {
+        "label": "Adopter une posture plus affirmée pour sécuriser votre position.",
+        "score": 0
+      },
+      "good": {
+        "label": "Prendre conscience de ce ressenti sans modifier votre attitude.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Ajuster subtilement votre comportement au contexte.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_038",
+    "axis": null,
+    "text": "Lorsque vous sentez une montée progressive d’agacement, vous êtes plutôt enclin à :",
+    "answers": {
+      "trap": {
+        "label": "Continuer l’interaction en contrôlant votre irritation.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Diminuer vos échanges pour éviter un débordement.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Écourter la situation par une réponse directe.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_039",
+    "axis": null,
+    "text": "Dans une situation où plusieurs facteurs stressants s’accumulent, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Réduire votre niveau d’engagement global.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Organiser davantage vos actions pour rester efficace.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir plus rapidement afin de traiter chaque contrainte.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_040",
+    "axis": null,
+    "text": "Lorsque vous percevez une perte progressive de contrôle émotionnel, votre réflexe est de :",
+    "answers": {
+      "bad": {
+        "label": "Intervenir rapidement pour reprendre la maîtrise.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Renforcer votre discipline personnelle.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Créer une distance afin de stabiliser votre état.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_041",
+    "axis": null,
+    "text": "Face à une interaction qui vous met durablement mal à l’aise, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Vous désengager progressivement sans confrontation.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Chercher à comprendre l’origine de cet inconfort.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Modifier votre posture pour prévenir un risque.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_042",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une attente extérieure pressante, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Accélérer votre réflexion pour répondre à la demande.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir rapidement afin de soulager la pression.",
+        "score": 0
+      },
+      "good": {
+        "label": "Maintenir votre rythme habituel malgré la pression.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_043",
+    "axis": null,
+    "text": "Dans une situation où les règles implicites semblent floues, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Observer le contexte avant d’adapter votre comportement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Chercher à clarifier activement ces règles.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer votre propre cadre de référence.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_044",
+    "axis": null,
+    "text": "Lorsque vous percevez une montée de stress sans échéance immédiate, vous êtes plutôt enclin à :",
+    "answers": {
+      "trap": {
+        "label": "Vous préparer activement à d’éventuelles complications.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Ralentir votre activité pour éviter une surcharge.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Accélérer afin de réduire ce ressenti.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_045",
+    "axis": null,
+    "text": "Face à une situation sociale prolongée qui vous fatigue, votre réaction la plus fréquente est de :",
+    "answers": {
+      "good": {
+        "label": "Réduire progressivement votre participation.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Mettre fin abruptement à la situation.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Maintenir votre présence par effort de volonté.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_046",
+    "axis": null,
+    "text": "Lorsque vous ressentez une pression interne à agir, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Transformer cette pression en action structurée.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Résister à cette impulsion et temporiser.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Suivre cette pression afin de vous soulager.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_047",
+    "axis": null,
+    "text": "Dans une situation où vos repères habituels sont remis en question, vous avez tendance à :",
+    "answers": {
+      "bad": {
+        "label": "Réaffirmer fortement vos positions.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Chercher à reconstruire rapidement de nouveaux repères.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Tolérer cette phase d’incertitude sans réaction immédiate.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_048",
+    "axis": null,
+    "text": "Lorsque vous percevez une fatigue émotionnelle progressive, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Alléger volontairement vos interactions pour préserver vos ressources.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir vos engagements en adaptant votre attitude.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Accélérer afin d’en finir plus vite.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_049",
+    "axis": null,
+    "text": "Face à une situation où les intentions d’autrui sont difficiles à lire, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Chercher à lever l’ambiguïté par un échange direct.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Conserver une posture d’observation sans conclusion hâtive.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Anticiper un risque et ajuster votre posture en conséquence.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_050",
+    "axis": null,
+    "text": "Lorsque vous sentez une pression à performer ou à convaincre, votre réflexe est de :",
+    "answers": {
+      "bad": {
+        "label": "Forcer votre position pour être entendu.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Structurer davantage votre discours.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Réduire votre implication afin de rester aligné.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_051",
+    "axis": null,
+    "text": "Dans une interaction prolongée qui vous met sous tension, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Créer une pause ou un retrait progressif.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester présent en contrôlant votre expression.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Clore l’échange par une réponse tranchée.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_052",
+    "axis": null,
+    "text": "Lorsque vous vous sentez incompris de manière répétée, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Multiplier les explications pour vous faire entendre.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accepter cette incompréhension sans chercher à la corriger immédiatement.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Durcir votre position pour réaffirmer votre point de vue.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_053",
+    "axis": null,
+    "text": "Face à une situation où vos attentes ne sont pas satisfaites, votre réaction la plus fréquente est de :",
+    "answers": {
+      "good": {
+        "label": "Réévaluer vos attentes avant d’agir.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Exprimer votre déception de manière mesurée.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Chercher à corriger activement la situation.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_054",
+    "axis": null,
+    "text": "Lorsque vous ressentez une urgence intérieure sans contrainte externe réelle, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Transformer cette urgence en action structurée.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir rapidement pour faire disparaître ce ressenti.",
+        "score": 0
+      },
+      "good": {
+        "label": "Interroger cette urgence avant de vous engager.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_055",
+    "axis": null,
+    "text": "Dans un contexte relationnel où les signaux sont contradictoires, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Tolérer cette contradiction sans chercher à la résoudre immédiatement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Choisir l’interprétation la plus cohérente pour agir.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Adopter une posture plus prudente et défensive.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_056",
+    "axis": null,
+    "text": "Lorsque vous sentez que votre patience est sollicitée au-delà de votre seuil habituel, vous êtes plutôt enclin à :",
+    "answers": {
+      "bad": {
+        "label": "Réagir de manière plus directe pour écourter la situation.",
+        "score": 0
+      },
+      "good": {
+        "label": "Réduire votre engagement afin d’éviter une réponse inadéquate.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir l’échange en contrôlant votre irritation.",
+        "score": 0.5
+      }
+    }
+  },
+  {
+    "id": "CIVIL_057",
+    "axis": null,
+    "text": "Face à une situation où votre rôle n’est pas clairement défini, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Observer avant de prendre une initiative.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Clarifier votre rôle par une intervention.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Définir vous-même votre rôle par l’action.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_058",
+    "axis": null,
+    "text": "Lorsque vous êtes exposé à des sollicitations multiples simultanées, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Hiérarchiser rapidement pour répondre à chacune.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Réduire le nombre de sollicitations traitées.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Tenter de répondre à tout pour éviter un échec.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_059",
+    "axis": null,
+    "text": "Dans une situation où vous vous sentez progressivement envahi, votre réflexe est de :",
+    "answers": {
+      "good": {
+        "label": "Créer une distance afin de retrouver un équilibre.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Poser des limites explicites.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Réagir de manière plus abrupte.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_060",
+    "axis": null,
+    "text": "Lorsque vous percevez un décalage entre vos valeurs et le contexte, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Tenter d’ajuster le contexte à vos valeurs.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Prendre du recul avant de décider comment agir.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Refuser le contexte de manière frontale.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_061",
+    "axis": null,
+    "text": "Face à une interaction où le rythme ne vous convient pas, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Adapter votre participation à ce rythme sans forcer.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Chercher à influencer le rythme de l’échange.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Imposer votre propre rythme.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_062",
+    "axis": null,
+    "text": "Lorsque vous sentez une pression implicite à réagir, vous avez tendance à :",
+    "answers": {
+      "bad": {
+        "label": "Réagir rapidement pour répondre à l’attente.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Formuler une réponse intermédiaire.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Résister à cette pression et différer votre réponse.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_063",
+    "axis": null,
+    "text": "Dans une situation où la tension est diffuse mais persistante, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Limiter votre exposition à cette situation.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester engagé afin de comprendre l’origine de la tension.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Chercher à provoquer une clarification.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_064",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une attente que vous jugez excessive, votre réaction la plus fréquente est de :",
+    "answers": {
+      "trap": {
+        "label": "Négocier afin d’ajuster cette attente.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Reconsidérer votre implication sans confrontation.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Refuser de manière directe.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_065",
+    "axis": null,
+    "text": "Face à une situation qui vous met durablement sous tension, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Vous retirer progressivement pour préserver votre équilibre.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Rester engagé par sens du devoir.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Mettre fin brutalement à la situation.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_066",
+    "axis": null,
+    "text": "Lorsque vous ressentez une dissonance interne persistante, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Accorder du temps à cette dissonance avant d’agir.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Chercher rapidement une solution pragmatique.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Agir pour faire taire ce ressenti.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_067",
+    "axis": null,
+    "text": "Dans une situation où vos limites personnelles sont sollicitées de façon répétée, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Renforcer vos limites par l’affirmation.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Réagir de manière plus rigide.",
+        "score": 0
+      },
+      "good": {
+        "label": "Réduire votre engagement pour préserver ces limites.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_068",
+    "axis": null,
+    "text": "Lorsque vous vous sentez progressivement sursollicité, votre stratégie privilégiée est de :",
+    "answers": {
+      "good": {
+        "label": "Ralentir et réévaluer vos priorités.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir le rythme en vous organisant davantage.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Continuer sans ajustement.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_069",
+    "axis": null,
+    "text": "Face à une situation où votre marge de manœuvre semble réduite, vous avez tendance à :",
+    "answers": {
+      "bad": {
+        "label": "Forcer une option pour retrouver du contrôle.",
+        "score": 0
+      },
+      "trap": {
+        "label": "Explorer activement les options disponibles.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accepter temporairement cette contrainte.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_070",
+    "axis": null,
+    "text": "Lorsque vous ressentez un besoin pressant de conclure une situation, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Orienter activement l’échange vers une conclusion.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Interroger ce besoin avant d’agir.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Clore la situation de manière abrupte.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_071",
+    "axis": null,
+    "text": "Dans une situation où vous vous sentez à la limite de vos capacités, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Réduire votre charge pour éviter un dépassement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Tenir en vous appuyant sur vos ressources restantes.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Pousser au-delà de vos limites.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_072",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une situation durablement inconfortable, votre réaction la plus fréquente est de :",
+    "answers": {
+      "trap": {
+        "label": "Chercher à vous adapter progressivement.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Vous désengager de manière réfléchie.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Mettre fin à la situation de façon radicale.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_073",
+    "axis": null,
+    "text": "Face à une situation où votre jugement semble moins clair qu’à l’habitude, vous avez tendance à :",
+    "answers": {
+      "good": {
+        "label": "Différer toute décision engageante.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Redoubler d’efforts pour rester rationnel.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Vous fier à votre ressenti immédiat.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_074",
+    "axis": null,
+    "text": "Lorsque vous sentez une accumulation de tensions mineures, vous êtes plutôt enclin à :",
+    "answers": {
+      "good": {
+        "label": "Alléger votre environnement pour éviter une surcharge.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Gérer chaque tension individuellement.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Ignorer ces tensions jusqu’à saturation.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_075",
+    "axis": null,
+    "text": "Dans une situation où vos repères habituels ne fonctionnent plus, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Reconstruire rapidement de nouveaux repères.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Réaffirmer fortement les anciens.",
+        "score": 0
+      },
+      "good": {
+        "label": "Tolérer cette phase d’incertitude.",
+        "score": 1
+      }
+    }
+  },
+  {
+    "id": "CIVIL_076",
+    "axis": null,
+    "text": "Lorsque vous êtes confronté à une contrainte prolongée, votre réaction la plus fréquente est de :",
+    "answers": {
+      "good": {
+        "label": "Adapter progressivement votre engagement.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Composer avec la contrainte sans modifier votre rythme.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Chercher à rompre la contrainte par l’action.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_077",
+    "axis": null,
+    "text": "Face à une situation où vous ressentez une perte d’autonomie, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Négocier pour retrouver une marge de manœuvre.",
+        "score": 0.5
+      },
+      "good": {
+        "label": "Accepter temporairement cette perte sans réaction immédiate.",
+        "score": 1
+      },
+      "bad": {
+        "label": "Réagir pour rétablir votre autonomie.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_078",
+    "axis": null,
+    "text": "Lorsque vous sentez une saturation émotionnelle, votre stratégie privilégiée est de :",
+    "answers": {
+      "good": {
+        "label": "Créer un espace de récupération avant toute décision.",
+        "score": 1
+      },
+      "trap": {
+        "label": "Maintenir vos engagements en réduisant l’intensité.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Forcer pour tenir jusqu’au bout.",
+        "score": 0
+      }
+    }
+  },
+  {
+    "id": "CIVIL_079",
+    "axis": null,
+    "text": "Dans une situation où vous percevez une limite personnelle atteinte, vous avez tendance à :",
+    "answers": {
+      "trap": {
+        "label": "Chercher un ajustement immédiat.",
+        "score": 0.5
+      },
+      "bad": {
+        "label": "Ignorer cette limite pour continuer.",
+        "score": 0
+      },
+      "good": {
+        "label": "Respecter cette limite et adapter votre comportement.",
+        "score": 1
+      }
+    }
+  }
+]

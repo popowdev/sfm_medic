@@ -1,0 +1,1142 @@
+[
+    {
+        "id": "Q001",
+        "axis": "psychologie",
+        "text": "Vous attendez à la lisière de la forêt depuis longtemps. Enfin, vous voyez un mouvement. Il peut disparaître très vite. Le stress monte. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous prenez le temps de vous calmer avant de décider.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous continuez et vous restez concentré.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez vite pour ne pas rater l'occasion.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q002",
+        "axis": "psychologie",
+        "text": "La sortie se passe mal. Il y a peu de traces. Vous avez beaucoup marché sans rien trouver. Vous pensez que la journée sera peut-être perdue. Comment réagissez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous acceptez d'arrêter la sortie.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous insistez encore un moment.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez quand même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q003",
+        "axis": "psychologie",
+        "text": "Depuis plus d'une heure, aucun gibier ne se montre. Vous êtes pourtant resté discret. La frustration monte. Vous avez envie d'aller plus vite. Comment réagissez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ralentissez vos gestes exprès.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous continuez au même rythme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous cherchez à vous rattraper en agissant.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q004",
+        "axis": "psychologie",
+        "text": "Un accompagnateur insiste : « Tirez maintenant, sinon on rentre les mains vides. » Mais vous n'êtes pas sûr de ce que vous voyez. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous refusez si vous n'êtes pas à l'aise.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous hésitez longtemps.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez pour ne pas décevoir.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q005",
+        "axis": "psychologie",
+        "text": "La situation n'est pas claire. Vous avez un doute sur ce que vous voyez. Vous avez aussi un doute sur ce qui se passe autour. Faut-il agir ou attendre ? Que choisissez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous choisissez de ne pas agir.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous observez encore un peu.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez malgré le doute.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q006",
+        "axis": "psychologie",
+        "text": "Vous marchez depuis plusieurs heures, en silence et bien concentré. La fatigue arrive. Vous sentez que votre attention baisse un peu. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous arrêtez ou vous faites une pause.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous continuez avec prudence.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez comme si de rien n'était.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q007",
+        "axis": "psychologie",
+        "text": "Un imprévu arrive : un bruit soudain, le vent qui change, un mouvement inattendu. Vos repères changent. Vous sentez que votre plan n'est plus sûr. Comment réagissez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous vous arrêtez pour refaire le point.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous ajustez sur le moment.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous improvisez vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q008",
+        "axis": "psychologie",
+        "text": "La journée est calme. Rien ne se passe. Vous pensez à forcer un peu les choses. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous trouvez ça normal.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous êtes un peu frustré.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous cherchez à provoquer une situation.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q009",
+        "axis": "psychologie",
+        "text": "Vous avez préparé cette sortie. Vous voulez bien faire. Vous devez choisir. Qu'est-ce qui compte le plus pour vous ?",
+        "answers": {
+            "good": {
+                "label": "La sécurité passe avant tout.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous cherchez un équilibre entre sécurité et résultat.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Le résultat passe avant le reste.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q010",
+        "axis": "psychologie",
+        "text": "Une occasion se présente. Puis elle disparaît. Vous êtes agacé. Vous voulez la rattraper. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous acceptez. Vous n'agissez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous essayez de vous replacer.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous forcez la situation.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q011",
+        "axis": "psychologie",
+        "text": "D'autres personnes sont peut-être dans la zone, plus loin. Vous vous sentez observé. Comment réagissez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous restez très prudent.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous changez un peu votre comportement.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous cherchez à montrer que vous maîtrisez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q012",
+        "axis": "psychologie",
+        "text": "Le rythme est lent. Tout se répète. Vous vous ennuyez. Votre esprit s'égare. Comment gérez-vous ce moment ?",
+        "answers": {
+            "good": {
+                "label": "Vous restez discipliné.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous changez un peu, sans prendre de risque.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous prenez plus de libertés.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q013",
+        "axis": "psychologie",
+        "text": "Un mouvement rapide attire votre regard. Votre cœur bat plus vite. Le stress monte. Comment gardez-vous le contrôle ?",
+        "answers": {
+            "good": {
+                "label": "Vous ralentissez exprès.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous vous concentrez plus.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez plus vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q014",
+        "axis": "psychologie",
+        "text": "Vous pourriez tirer. Mais le gain est faible. Ça ne change presque rien. Vous hésitez : en profiter ou rester strict. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous hésitez longtemps.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q015",
+        "axis": "psychologie",
+        "text": "Vous avez fait une erreur plus tôt. Un mauvais placement, un mauvais choix. Cela vous agace. Vous sentez que cela peut fausser vos prochaines décisions. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous faites une pause.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous continuez, mais au calme.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous cherchez à vous rattraper tout de suite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q016",
+        "axis": "psychologie",
+        "text": "Vous êtes moins patient qu'au début. Vous vous sentez pressé. Vous remarquez cette impatience. Que décidez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous préférez arrêter.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous continuez, mais avec prudence.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous forcez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q017",
+        "axis": "psychologie",
+        "text": "Vous avez deux choix. Le premier peut marcher, mais il est plus risqué. Le second est plus sûr, mais moins satisfaisant. Que choisissez-vous ?",
+        "answers": {
+            "good": {
+                "label": "Le choix sûr.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Un entre-deux.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Le choix risqué.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q018",
+        "axis": "psychologie",
+        "text": "Vous êtes seul. Vous n'avez pas de coéquipier. Personne ne peut vous couvrir. La situation peut changer à tout moment. Comment adaptez-vous votre comportement ?",
+        "answers": {
+            "good": {
+                "label": "Vous êtes encore plus prudent.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous continuez comme d'habitude.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous prenez plus de risques.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q019",
+        "axis": "psychologie",
+        "text": "Un doute vous vient : « Et si je me trompais ? ». Vous sentez ce doute au moment de décider. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous n'agissez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous observez encore un peu.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez quand même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q020",
+        "axis": "psychologie",
+        "text": "Pour vous, renoncer à une action pendant une chasse, c'est surtout…",
+        "answers": {
+            "good": {
+                "label": "Une décision responsable.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Une gêne acceptable.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Un échec.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q021",
+        "axis": "securite",
+        "text": "Une forme bouge dans les buissons. Les branches et la distance vous gênent. Vous ne voyez pas clairement ce que c'est. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous attendez encore un peu.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q022",
+        "axis": "securite",
+        "text": "Vous voyez une cible possible. Mais vous ne savez pas ce qu'il y a derrière. Un chemin ? Un espace ouvert ? Le fond de tir n'est pas sûr. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous changez un peu d'angle.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez quand même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q023",
+        "axis": "securite",
+        "text": "Vous ne voyez pas toute la zone. Une personne peut être tout près. Elle serait hors de votre vue. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous arrêtez tout.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous faites encore plus attention.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q024",
+        "axis": "securite",
+        "text": "La lumière baisse. Les plantes cachent une partie de la vue. Vous devez forcer pour bien voir. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous arrêtez la chasse.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous agissez très peu.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez normalement.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q025",
+        "axis": "securite",
+        "text": "Vous êtes en poste depuis quelques minutes. Vous entendez des voix au loin. Vous ne voyez pas d'où elles viennent. Elles semblent se rapprocher. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous mettez l'arme en sécurité et vous observez.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous attendez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous n'en tenez pas compte.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q026",
+        "axis": "securite",
+        "text": "Un animal passe près d'un sentier très fréquenté. Vous avez une bonne occasion de tirer. Mais la zone n'est pas sûre à cent pour cent. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous attendez qu'il s'éloigne.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q027",
+        "axis": "securite",
+        "text": "Un mouvement soudain apparaît devant vous. Il vous surprend. Pendant une seconde, vous ne savez pas ce que c'est. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous vérifiez avant d'agir.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous vous approchez avec prudence.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez sans réfléchir.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q028",
+        "axis": "securite",
+        "text": "Vous êtes près de maisons. Des gens peuvent passer par là. Chaque tir doit être parfait. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous évitez cette zone.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous faites très attention.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q029",
+        "axis": "securite",
+        "text": "Votre position est mauvaise. L'angle est douteux. Vous tenez mal l'arme. Vous le sentez au moment de tirer. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous changez de position ou vous renoncez.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous ajustez un peu.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez quand même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q030",
+        "axis": "securite",
+        "text": "Vous perdez la vue d'ensemble un instant. Un obstacle gêne. Vous n'êtes plus sûr de tout voir autour de vous. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous vous arrêtez.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous attendez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q031",
+        "axis": "securite",
+        "text": "Un autre chasseur est peut-être tout près. Vous ne savez pas où. Vous ne voulez pas créer de danger. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous mettez tout de suite l'arme en sécurité.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous vérifiez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q032",
+        "axis": "securite",
+        "text": "Un bruit vient de derrière vous. Vous tournez la tête. Vous perdez vos repères une seconde. Avant d'agir, quel est votre réflexe ?",
+        "answers": {
+            "good": {
+                "label": "Vous vérifiez avant d'agir.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous vous replacez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous n'en tenez pas compte.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q033",
+        "axis": "securite",
+        "text": "Le sol est dur : pierres, eau. La balle peut ricocher. Vous n'êtes pas sûr de son trajet. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous changez l'angle.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q034",
+        "axis": "securite",
+        "text": "La situation devient dure à prévoir. La végétation est dense. Tout bouge vite. Il vous manque des infos. Vous n'êtes sûr de rien. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous arrêtez.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous ralentissez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q035",
+        "axis": "securite",
+        "text": "Votre angle de tir n'est pas sûr. Vous ne pouvez pas garantir un trajet sûr du début à la fin. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous ajustez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q036",
+        "axis": "securite",
+        "text": "Un animal est en partie caché. Une branche, une clôture ou un buisson le cache. Vous ne le voyez pas bien. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous attendez.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous vous déplacez pour mieux voir.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tirez quand même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q037",
+        "axis": "securite",
+        "text": "Vous êtes fatigué. Vous avez du mal à rester concentré. Vos pensées partent ailleurs. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous faites une pause.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous forcez pour rester attentif.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez quand même.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q038",
+        "axis": "securite",
+        "text": "Autour de vous, tout change vite. Le vent, les bruits, les mouvements. Ce n'est plus pareil qu'il y a 2 minutes. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous observez la situation.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous ralentissez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous agissez vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q039",
+        "axis": "securite",
+        "text": "Vous n'êtes pas sûr que ce soit sans danger. Vous doutez de la cible, du fond, ou de la présence de gens. Le doute est fort. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous ne tirez pas.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous attendez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous tentez le coup.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q040",
+        "axis": "securite",
+        "text": "Pour vous, tirer sans être sûr de la cible et de ce qu'il y a autour, c'est…",
+        "answers": {
+            "good": {
+                "label": "Inacceptable.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "À éviter.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Acceptable.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q041",
+        "axis": "reglementation",
+        "text": "Vous préparez une sortie de chasse. Vous choisissez le lieu. Vous voulez rester dans un cadre autorisé. Où doit se passer la chasse ?",
+        "answers": {
+            "good": {
+                "label": "Seulement dans les zones autorisées.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Là où il y a du gibier.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Partout.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q042",
+        "axis": "reglementation",
+        "text": "Pendant la sortie, vous voyez des promeneurs. Ou vous savez que le coin est fréquenté. Vous voulez éviter tout risque pour eux. Tirer dans leur direction, c'est…",
+        "answers": {
+            "good": {
+                "label": "Dangereux et interdit.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "À éviter.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Possible.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q043",
+        "axis": "reglementation",
+        "text": "Avant de partir, on vous propose un verre d'alcool « pour se réchauffer ». Vous devez rester bien attentif. Quelle est la conduite la plus responsable ?",
+        "answers": {
+            "good": {
+                "label": "L'alcool et la chasse ne vont pas ensemble.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Cela dépend de la quantité bue.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Ce n'est pas un problème.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q044",
+        "axis": "reglementation",
+        "text": "Vous choisissez votre matériel. Vous voulez éviter une arme dangereuse ou mal adaptée. Quelle règle compte le plus pour l'arme ?",
+        "answers": {
+            "good": {
+                "label": "Elle doit être conforme et prévue pour la chasse.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Il suffit qu'elle fonctionne.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "N'importe quelle arme convient.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q045",
+        "axis": "reglementation",
+        "text": "Vous marchez jusqu'à votre zone de chasse. Le trajet est un peu long. Vous voulez éviter tout tir par accident en chemin. Que faites-vous ?",
+        "answers": {
+            "good": {
+                "label": "Vous mettez l'arme en sécurité pendant le trajet.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous restez souple sur ce point.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Cela n'a pas d'importance.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q046",
+        "axis": "reglementation",
+        "text": "En fin de journée, la lumière baisse. Vous voyez moins bien les formes et les distances. Que doit dire la règle de prudence ?",
+        "answers": {
+            "good": {
+                "label": "Elle impose d'arrêter la chasse.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Elle demande plus d'attention.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Elle n'empêche pas de continuer.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q047",
+        "axis": "reglementation",
+        "text": "Vous voyez un risque dans la zone : un passage, une mauvaise visibilité ou un terrain difficile. Vous hésitez à continuer quand même. Quelle est la meilleure conduite ?",
+        "answers": {
+            "good": {
+                "label": "Vous arrêtez.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Vous observez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Vous continuez.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q048",
+        "axis": "reglementation",
+        "text": "Vous chassez dans un milieu naturel fragile. Vous voulez rester respectueux. Quel comportement montre le mieux le respect de la nature ?",
+        "answers": {
+            "good": {
+                "label": "Le respect fait partie de la chasse.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Le respect passe après le reste.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Le respect n'a pas d'importance.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q049",
+        "axis": "reglementation",
+        "text": "Ce test et le permis ont un but principal. Selon vous, lequel ?",
+        "answers": {
+            "good": {
+                "label": "Assurer la sécurité et la responsabilité.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Autoriser à chasser.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Donner accès à une arme.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q050",
+        "axis": "reglementation",
+        "text": "Vous voyez quelqu'un agir sans prudence. Il va trop vite. Il ne vérifie rien. Que pensez-vous de ce comportement ?",
+        "answers": {
+            "good": {
+                "label": "C'est inacceptable.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "C'est parfois acceptable.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "C'est normal.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q051",
+        "axis": "reglementation",
+        "text": "Vous voulez chasser. Avant de commencer, que faut-il connaître au minimum ?",
+        "answers": {
+            "good": {
+                "label": "Les règles de base.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Quelques principes.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Savoir tirer.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q052",
+        "axis": "reglementation",
+        "text": "La situation devient dangereuse. Vous avez un doute. Il y a peut-être des gens autour. Que faut-il décider en premier ?",
+        "answers": {
+            "good": {
+                "label": "Arrêter tout de suite.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "S'adapter.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Réagir vite.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q053",
+        "axis": "reglementation",
+        "text": "Dans toutes les situations, la sécurité des autres est pour vous :",
+        "answers": {
+            "good": {
+                "label": "La priorité.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Importante.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Secondaire.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q054",
+        "axis": "reglementation",
+        "text": "Vous partez chasser. Pour vous, ce n'est pas juste un loisir. La chasse, c'est avant tout :",
+        "answers": {
+            "good": {
+                "label": "Une responsabilité.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Un loisir.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Un droit absolu.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q055",
+        "axis": "reglementation",
+        "text": "Une règle importante n'est pas respectée. Quelle suite vous semble la plus logique ?",
+        "answers": {
+            "good": {
+                "label": "Cela peut mener à un refus.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "C'est tolérable.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Il n'y a aucune conséquence.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q056",
+        "axis": "reglementation",
+        "text": "Pendant une sortie, vous décidez sans arrêt. Où vous placer. Quoi observer. Quand tirer. De quoi êtes-vous responsable ?",
+        "answers": {
+            "good": {
+                "label": "De chacune de vos actions.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Surtout du tir.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Seulement de vous.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q057",
+        "axis": "reglementation",
+        "text": "Un accident arrive. Vous cherchez la cause la plus fréquente. Pour vous, c'est le plus souvent :",
+        "answers": {
+            "good": {
+                "label": "Un manque de prudence.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "La malchance.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Impossible à éviter.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q058",
+        "axis": "reglementation",
+        "text": "Vous voulez éviter les excès et les accidents. Une pratique responsable doit rester :",
+        "answers": {
+            "good": {
+                "label": "Encadrée et sûre.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Libre mais prudente.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Sans aucune règle.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q059",
+        "axis": "reglementation",
+        "text": "La situation n'est pas sûre. Vous refusez de tirer. L'occasion était rare. Pour vous, ce choix :",
+        "answers": {
+            "good": {
+                "label": "C'est une bonne décision.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "C'est un choix personnel.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "C'est une faiblesse.",
+                "score": 0
+            }
+        }
+    },
+    {
+        "id": "Q060",
+        "axis": "reglementation",
+        "text": "Pour finir. Ce questionnaire sert surtout à vérifier :",
+        "answers": {
+            "good": {
+                "label": "Si vous êtes responsable.",
+                "score": 1
+            },
+            "neutral": {
+                "label": "Ce que vous savez.",
+                "score": 0.5
+            },
+            "bad": {
+                "label": "Votre envie de chasser.",
+                "score": 0
+            }
+        }
+    }
+]

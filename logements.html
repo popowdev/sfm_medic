@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAMR — Gestion des Logements</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0d0f14; --surface:#14171f; --surface2:#1c2030; --border:#252a38;
+  --accent:#e8c96e; --accent2:#d4a843;
+  --libre:#3ecf8e; --occupee:#e07b54; --maintenance:#7b8cde;
+  --text:#e8eaf0; --text-muted:#6b7280; --text-dim:#9ca3af;
+  --danger:#ef4444; --warning:#f59e0b; --radius:12px;
+  --shadow:0 4px 24px rgba(0,0,0,0.4);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+
+/* HEADER */
+header{background:linear-gradient(135deg,#0d0f14,#141826);border-bottom:1px solid var(--border);padding:0 32px;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);}
+.header-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent);}
+.logo-sub{font-size:11px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;}
+.header-stats{display:flex;gap:28px;}
+.stat-item{text-align:center;}
+.stat-value{font-family:'Bebas Neue',sans-serif;font-size:24px;line-height:1;}
+.stat-value.libre{color:var(--libre);}.stat-value.occupee{color:var(--occupee);}.stat-value.maintenance{color:var(--maintenance);}.stat-value.total{color:var(--accent);}
+.stat-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-top:2px;}
+.header-actions{display:flex;gap:8px;}
+
+/* BUTTONS */
+.btn{padding:9px 16px;border-radius:8px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;transition:all .15s;display:flex;align-items:center;gap:6px;}
+.btn-primary{background:var(--accent);color:#0d0f14;}.btn-primary:hover{background:var(--accent2);transform:translateY(-1px);}
+.btn-ghost{background:transparent;color:var(--text-dim);border:1px solid var(--border);}.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+.btn-danger{background:rgba(239,68,68,.15);color:var(--danger);border:1px solid rgba(239,68,68,.3);}.btn-danger:hover{background:rgba(239,68,68,.25);}
+.btn-sm{padding:6px 12px;font-size:12px;}
+
+/* MAIN */
+main{max-width:1400px;margin:0 auto;padding:28px 32px;}
+
+/* ALERTS */
+.alerts-section{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;display:none;}
+.alerts-section.visible{display:block;}
+.alerts-title{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2px;color:var(--danger);margin-bottom:8px;}
+.alert-item{font-size:13px;color:var(--text-dim);padding:4px 0;display:flex;align-items:center;gap:8px;}
+.alert-dot{width:6px;height:6px;background:var(--danger);border-radius:50%;flex-shrink:0;}
+
+/* TOOLBAR */
+.toolbar{display:flex;gap:10px;margin-bottom:24px;flex-wrap:wrap;align-items:center;}
+.filter-btn{padding:8px 14px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:6px;}
+.filter-btn.active,.filter-btn:hover{background:var(--surface2);color:var(--text);border-color:var(--accent);}
+.dot{width:8px;height:8px;border-radius:50%;}
+.dot.libre{background:var(--libre);}.dot.occupee{background:var(--occupee);}.dot.maintenance{background:var(--maintenance);}.dot.all{background:var(--accent);}
+.toolbar-sep{width:1px;height:28px;background:var(--border);margin:0 4px;}
+.search-input{padding:8px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:border-color .15s;width:210px;}
+.search-input:focus{border-color:var(--accent);}
+.search-input::placeholder{color:var(--text-muted);}
+.spacer{flex:1;}
+.view-toggle{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.view-btn{padding:8px 14px;background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:15px;transition:all .15s;}
+.view-btn.active{background:var(--surface2);color:var(--accent);}
+
+/* ACCORDION */
+.accordion{margin-bottom:14px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s;}
+.accordion.open{border-color:rgba(232,201,110,.35);}
+.accordion-header{display:flex;align-items:center;gap:14px;padding:16px 22px;background:var(--surface);cursor:pointer;user-select:none;transition:background .15s;}
+.accordion-header:hover{background:var(--surface2);}
+.floor-title{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--accent);line-height:1;}
+.floor-badge{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:3px 9px;font-size:11px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;}
+.floor-mini-stats{display:flex;gap:8px;margin-left:6px;}
+.floor-mini-stat{font-size:11px;padding:3px 8px;border-radius:12px;font-weight:600;}
+.floor-mini-stat.libre{background:rgba(62,207,142,.12);color:var(--libre);}
+.floor-mini-stat.occupee{background:rgba(224,123,84,.12);color:var(--occupee);}
+.floor-mini-stat.maintenance{background:rgba(123,140,222,.12);color:var(--maintenance);}
+.accordion-chevron{font-size:12px;color:var(--text-muted);transition:transform .3s ease;margin-left:auto;flex-shrink:0;}
+.accordion.open .accordion-chevron{transform:rotate(180deg);}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1);background:var(--bg);}
+.accordion.open .accordion-body{max-height:9999px;}
+.accordion-body-inner{padding:18px 22px 22px;}
+
+/* GRID */
+.rooms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(276px,1fr));gap:14px;}
+.room-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;position:relative;transition:all .2s;overflow:hidden;cursor:pointer;}
+.room-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius) var(--radius) 0 0;}
+.room-card.libre::before{background:var(--libre);}.room-card.occupee::before{background:var(--occupee);}.room-card.maintenance::before{background:var(--maintenance);}
+.room-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.room-card.libre:hover{border-color:var(--libre);}.room-card.occupee:hover{border-color:var(--occupee);}.room-card.maintenance:hover{border-color:var(--maintenance);}
+.room-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;}
+.room-number{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;line-height:1;}
+.room-floor-tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);margin-top:2px;}
+.status-badge{padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+.status-badge.libre{background:rgba(62,207,142,.15);color:var(--libre);}
+.status-badge.occupee{background:rgba(224,123,84,.15);color:var(--occupee);}
+.status-badge.maintenance{background:rgba(123,140,222,.15);color:var(--maintenance);}
+.occupant-info{margin-bottom:10px;}
+.occupant-name{font-weight:600;font-size:14px;margin-bottom:3px;}
+.occupant-meta{font-size:12px;color:var(--text-muted);line-height:1.6;}
+.countdown-block{background:var(--surface2);border-radius:8px;padding:9px 12px;margin-bottom:10px;}
+.countdown-label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:3px;}
+.countdown-value{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;}
+.countdown-value.urgent{color:var(--warning);}.countdown-value.critical{color:var(--danger);animation:pulse 1.5s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.6;}}
+.progress-bar{height:4px;background:var(--border);border-radius:2px;margin-top:5px;overflow:hidden;}
+.progress-fill{height:100%;border-radius:2px;transition:width .5s;}
+.progress-fill.ok{background:var(--libre);}.progress-fill.urgent{background:var(--warning);}.progress-fill.critical{background:var(--danger);}
+.room-notes{font-size:11px;color:var(--text-muted);font-style:italic;margin-top:6px;padding:5px 8px;background:var(--surface2);border-radius:6px;border-left:2px solid var(--border);}
+.card-actions{display:flex;gap:5px;margin-top:10px;border-top:1px solid var(--border);padding-top:10px;flex-wrap:wrap;}
+.card-btn{flex:1;min-width:68px;padding:6px 4px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text-dim);font-size:11px;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .15s;text-align:center;white-space:nowrap;}
+.card-btn:hover{background:var(--surface2);color:var(--text);}
+.card-btn.libre-btn:hover{color:var(--libre);border-color:var(--libre);}
+.card-btn.maintenance-btn:hover{color:var(--maintenance);border-color:var(--maintenance);}
+.card-btn.extend-btn:hover{color:var(--warning);border-color:var(--warning);}
+.card-btn.history-btn:hover{color:var(--accent);border-color:var(--accent);}
+.empty-state{text-align:center;padding:32px;color:var(--text-muted);font-size:13px;}
+
+/* TABLE */
+.table-wrapper{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+thead tr{border-bottom:2px solid var(--border);}
+th{padding:10px 14px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);font-weight:600;cursor:pointer;user-select:none;white-space:nowrap;}
+th:hover{color:var(--accent);}
+th .sa{margin-left:4px;opacity:.35;}
+th.sorted .sa{opacity:1;color:var(--accent);}
+tbody tr{border-bottom:1px solid var(--border);transition:background .12s;cursor:pointer;}
+tbody tr:hover{background:var(--surface2);}
+td{padding:10px 14px;vertical-align:middle;}
+.td-num{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;}
+.td-days{font-family:'JetBrains Mono',monospace;font-size:12px;}
+.td-days.urgent{color:var(--warning);font-weight:600;}.td-days.critical{color:var(--danger);font-weight:700;}
+.td-acts{display:flex;gap:5px;}
+.t-btn{padding:4px 8px;border-radius:5px;border:1px solid var(--border);background:transparent;color:var(--text-dim);font-size:11px;cursor:pointer;transition:all .12s;white-space:nowrap;}
+.t-btn:hover{background:var(--surface2);color:var(--text);}
+
+/* MODALS */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(4px);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:26px;width:100%;max-width:500px;box-shadow:0 20px 60px rgba(0,0,0,.6);transform:translateY(10px) scale(.98);transition:transform .2s;max-height:90vh;overflow-y:auto;}
+.modal-overlay.open .modal{transform:translateY(0) scale(1);}
+.modal-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--accent);margin-bottom:2px;}
+.modal-sub{font-size:12px;color:var(--text-muted);margin-bottom:20px;}
+.form-group{margin-bottom:14px;}
+.form-label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--text-dim);margin-bottom:5px;}
+.form-input,.form-select,.form-textarea{width:100%;padding:9px 13px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;transition:border-color .15s;outline:none;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent);}
+.form-select option{background:var(--surface2);}
+.form-textarea{resize:vertical;min-height:64px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.modal-actions{display:flex;gap:8px;margin-top:20px;}
+
+/* EXTEND PILLS */
+.extend-pills{display:flex;gap:6px;margin-top:6px;}
+.extend-pill{padding:5px 12px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-muted);font-size:12px;cursor:pointer;transition:all .15s;}
+.extend-pill:hover{background:rgba(245,158,11,.12);border-color:var(--warning);color:var(--warning);}
+
+/* SHEET SECTION */
+.sheet-section{background:var(--surface2);border-radius:8px;padding:12px;margin-bottom:12px;}
+.sheet-section-title{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:8px;font-weight:600;}
+
+/* JOURNAL */
+.journal-list{margin-bottom:8px;}
+.journal-entry{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.journal-entry:last-child{border-bottom:none;}
+.journal-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);white-space:nowrap;padding-top:2px;min-width:120px;}
+.journal-text{flex:1;color:var(--text-dim);}
+.add-journal-row{display:flex;gap:8px;}
+.add-journal-row .form-input{flex:1;}
+
+/* CONFIRM MODAL */
+.confirm-modal{max-width:380px;}
+.confirm-icon{font-size:36px;text-align:center;margin-bottom:10px;}
+.confirm-text{text-align:center;color:var(--text-dim);font-size:14px;line-height:1.6;}
+
+/* HISTORY MODAL */
+.history-modal{max-width:620px;}
+.history-entry{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);}
+.history-entry:last-child{border-bottom:none;}
+.h-avatar{width:36px;height:36px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.h-body{flex:1;}
+.h-name{font-weight:600;font-size:14px;margin-bottom:3px;}
+.h-dates{font-size:12px;color:var(--text-muted);margin-bottom:5px;}
+.h-tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;margin-right:4px;margin-bottom:2px;}
+.h-tag.situation{background:rgba(123,140,222,.15);color:var(--maintenance);}
+.h-tag.referent{background:rgba(232,201,110,.1);color:var(--accent);}
+.h-notes{font-size:12px;color:var(--text-dim);font-style:italic;padding:5px 8px;background:var(--surface2);border-radius:6px;border-left:2px solid var(--border);margin-top:6px;}
+.h-empty{text-align:center;color:var(--text-muted);font-size:13px;padding:28px 0;}
+
+/* STARTUP MODAL */
+.startup-modal{max-width:520px;}
+.startup-item{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
+.startup-item:last-child{border-bottom:none;}
+.startup-num{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--danger);min-width:44px;}
+.startup-info{flex:1;}
+.startup-name{font-weight:600;font-size:14px;}
+.startup-detail{font-size:12px;color:var(--text-muted);}
+.startup-badge{padding:3px 9px;border-radius:12px;font-size:11px;font-weight:600;}
+.startup-badge.expiring{background:rgba(245,158,11,.15);color:var(--warning);}
+.startup-badge.expired{background:rgba(239,68,68,.15);color:var(--danger);}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--surface);border:1px solid var(--accent);border-radius:10px;padding:11px 18px;font-size:13px;color:var(--text);box-shadow:var(--shadow);z-index:2000;transform:translateY(20px);opacity:0;transition:all .25s;max-width:320px;}
+.toast.show{transform:translateY(0);opacity:1;}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px;} ::-webkit-scrollbar-track{background:var(--bg);} ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;} ::-webkit-scrollbar-thumb:hover{background:var(--text-muted);}
+
+/* PRINT */
+@media print{
+  header,.toolbar,.card-actions,.td-acts,.modal-overlay,.toast,#startup-overlay{display:none!important;}
+  body{background:#fff;color:#000;}
+  .accordion-body{max-height:unset!important;overflow:visible!important;}
+  .accordion{border:1px solid #ccc;margin-bottom:8px;page-break-inside:avoid;}
+  .accordion-header{background:#f5f5f5;}
+  .floor-title{color:#000;}
+  .room-card{border:1px solid #ccc;break-inside:avoid;background:#fff;}
+  .room-number,.countdown-value,.stat-value{color:#000!important;}
+  .status-badge.libre{background:#e8f9f1;color:#1a7a51;}
+  .status-badge.occupee{background:#fef0eb;color:#9a4020;}
+  .status-badge.maintenance{background:#eef0fd;color:#3a4a9a;}
+  .countdown-block,.room-notes,.occupant-meta{background:#f5f5f5;}
+  .rooms-grid{grid-template-columns:repeat(3,1fr);}
+  .accordion-body{display:block;}
+}
+
+@media(max-width:700px){
+  main{padding:16px;}
+  .header-inner{flex-wrap:wrap;height:auto;padding:12px 0;}
+  .header-stats{gap:14px;}
+  .rooms-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .search-input{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">🏨</div>
+      <div>
+        <div class="logo-text">SAMR — Los Santos</div>
+        <div class="logo-sub">Gestion des logements temporaires</div>
+      </div>
+    </div>
+    <div class="header-stats">
+      <div class="stat-item"><div class="stat-value total" id="stat-total">38</div><div class="stat-label">Total</div></div>
+      <div class="stat-item"><div class="stat-value libre" id="stat-libre">0</div><div class="stat-label">Libres</div></div>
+      <div class="stat-item"><div class="stat-value occupee" id="stat-occupee">0</div><div class="stat-label">Occupés</div></div>
+      <div class="stat-item"><div class="stat-value maintenance" id="stat-maintenance">0</div><div class="stat-label">Maintenance</div></div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-ghost" onclick="window.print()">🖨️ Imprimer</button>
+      <button class="btn btn-ghost" onclick="exportData()">📤 Exporter</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="alerts-section" id="alerts-section">
+    <div class="alerts-title">⚠ Séjours à expiration imminente</div>
+    <div id="alerts-list"></div>
+  </div>
+
+  <div class="toolbar">
+    <button class="filter-btn active" onclick="setFilter('all',this)"><span class="dot all"></span>Tous</button>
+    <button class="filter-btn" onclick="setFilter('libre',this)"><span class="dot libre"></span>Libres</button>
+    <button class="filter-btn" onclick="setFilter('occupee',this)"><span class="dot occupee"></span>Occupés</button>
+    <button class="filter-btn" onclick="setFilter('maintenance',this)"><span class="dot maintenance"></span>Maintenance</button>
+    <div class="toolbar-sep"></div>
+    <input class="search-input" type="text" placeholder="🔍 Rechercher…" oninput="setSearch(this.value)">
+    <div class="spacer"></div>
+    <div class="view-toggle">
+      <button class="view-btn active" id="vbtn-grid" onclick="setView('grid')" title="Vue grille">⊞</button>
+      <button class="view-btn" id="vbtn-table" onclick="setView('table')" title="Vue tableau">☰</button>
+    </div>
+  </div>
+
+  <div class="accordion open" id="accordion-rdc">
+    <div class="accordion-header" onclick="toggleAccordion('accordion-rdc')">
+      <div class="floor-title">Rez-de-chaussée</div>
+      <div class="floor-badge">17 logements · RDC</div>
+      <div class="floor-mini-stats" id="mini-stats-rdc"></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="accordion-body-inner"><div id="content-rdc"></div></div>
+    </div>
+  </div>
+
+  <div class="accordion open" id="accordion-1er">
+    <div class="accordion-header" onclick="toggleAccordion('accordion-1er')">
+      <div class="floor-title">1<sup style="font-size:14px;font-family:'DM Sans',sans-serif;vertical-align:super">er</sup> Étage</div>
+      <div class="floor-badge">21 logements · Étage 1</div>
+      <div class="floor-mini-stats" id="mini-stats-1er"></div>
+      <span class="accordion-chevron">▼</span>
+    </div>
+    <div class="accordion-body">
+      <div class="accordion-body-inner"><div id="content-1er"></div></div>
+    </div>
+  </div>
+</main>
+
+<div class="modal-overlay" id="modal-edit-overlay">
+  <div class="modal">
+    <div class="modal-title" id="edit-title">Logement</div>
+    <div class="modal-sub" id="edit-sub">Modifier les informations</div>
+    <div class="form-group">
+      <label class="form-label">Statut</label>
+      <select class="form-select" id="edit-status" onchange="onStatusChange(this.value)">
+        <option value="libre">🟢 Libre</option>
+        <option value="occupee">🟠 Occupé</option>
+        <option value="maintenance">🔵 En maintenance</option>
+      </select>
+    </div>
+    <div id="edit-occupant-fields" style="display:none;">
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Nom de l'occupant</label><input class="form-input" id="edit-name" type="text" placeholder="Ex: John D."></div>
+        <div class="form-group"><label class="form-label">Contact IC</label><input class="form-input" id="edit-contact" type="text" placeholder="Numéro / radio"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Date d'entrée</label><input class="form-input" id="edit-start" type="date"></div>
+        <div class="form-group"><label class="form-label">Durée (jours)</label><input class="form-input" id="edit-duration" type="number" min="1" max="90" value="30"></div>
+      </div>
+      <div class="form-group" id="extend-group" style="display:none;">
+        <label class="form-label">Extension rapide</label>
+        <div class="extend-pills">
+          <button class="extend-pill" onclick="extendDuration(7)">+7 jours</button>
+          <button class="extend-pill" onclick="extendDuration(15)">+15 jours</button>
+          <button class="extend-pill" onclick="extendDuration(30)">+30 jours</button>
+        </div>
+      </div>
+      <div class="sheet-section">
+        <div class="sheet-section-title">Profil &amp; situation</div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Référent social</label><input class="form-input" id="edit-referent" type="text" placeholder="Nom du référent"></div>
+          <div class="form-group">
+            <label class="form-label">Situation</label>
+            <select class="form-select" id="edit-situation">
+              <option value="">— Choisir —</option>
+              <option>Isolé(e)</option><option>Famille</option><option>Mineur(e)</option>
+              <option>Couple</option><option>Vétéran</option><option>Autre</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Notes / Observations</label>
+      <textarea class="form-textarea" id="edit-notes" placeholder="Motif, besoins particuliers…"></textarea>
+    </div>
+    <div id="journal-section" style="display:none;">
+      <div class="sheet-section">
+        <div class="sheet-section-title">Journal de suivi</div>
+        <div class="journal-list" id="journal-list"></div>
+        <div class="add-journal-row">
+          <input class="form-input" id="journal-input" type="text" placeholder="Ajouter une note horodatée…" onkeydown="if(event.key==='Enter')addJournalEntry()">
+          <button class="btn btn-ghost btn-sm" onclick="addJournalEntry()">＋</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-primary" onclick="saveRoom()" style="flex:1">💾 Sauvegarder</button>
+      <button class="btn btn-danger" onclick="closeModal('modal-edit-overlay')">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-confirm-overlay">
+  <div class="modal confirm-modal">
+    <div class="confirm-icon">🔓</div>
+    <div class="modal-title" style="text-align:center">Libérer le logement ?</div>
+    <div class="modal-sub" style="text-align:center" id="confirm-sub"></div>
+    <p class="confirm-text">L'occupant sera <strong>archivé dans l'historique</strong>. Le logement passera en statut <strong>Libre</strong>.</p>
+    <div class="modal-actions" style="justify-content:center;margin-top:18px;">
+      <button class="btn btn-danger" onclick="confirmFree()" style="flex:1">Oui, libérer</button>
+      <button class="btn btn-ghost" onclick="closeModal('modal-confirm-overlay')" style="flex:1">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-history-overlay">
+  <div class="modal history-modal">
+    <div class="modal-title" id="history-title">Historique</div>
+    <div class="modal-sub" id="history-sub"></div>
+    <div id="history-timeline"></div>
+    <div class="modal-actions" style="margin-top:16px;">
+      <button class="btn btn-ghost" onclick="closeModal('modal-history-overlay')" style="flex:1">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="startup-overlay">
+  <div class="modal startup-modal">
+    <div class="modal-title">⚠ Rappel du jour</div>
+    <div class="modal-sub" id="startup-date"></div>
+    <div id="startup-list"></div>
+    <div class="modal-actions" style="margin-top:18px;">
+      <button class="btn btn-primary" onclick="closeModal('startup-overlay')" style="flex:1">Compris, continuer →</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let rooms = JSON.parse(localStorage.getItem('samr_rooms2') || 'null');
+let currentFilter = 'all', currentSearch = '', currentView = 'grid';
+let editingId = null, confirmFreeId = null;
+let sortCol = 'number', sortDir = 1;
+
+if (!rooms) {
+  rooms = [];
+  for (let i=1;i<=17;i++) rooms.push(mkRoom(`rdc-${i}`,`${100+i}`,'rdc','RDC'));
+  for (let i=1;i<=21;i++) rooms.push(mkRoom(`1er-${i}`,`${200+i}`,'1er','1er étage'));
+  save();
+}
+rooms.forEach(r=>{
+  if(!r.journal) r.journal=[];
+  if(!r.history) r.history=[];
+  if(!r.referent) r.referent='';
+  if(!r.situation) r.situation='';
+});
+
+function mkRoom(id,number,floor,floorLabel){
+  return{id,number,floor,floorLabel,status:'libre',name:'',contact:'',start:null,duration:30,notes:'',referent:'',situation:'',journal:[],history:[]};
+}
+function save(){ localStorage.setItem('samr_rooms2',JSON.stringify(rooms)); }
+
+function daysLeft(r){
+  if(!r.start) return null;
+  const end=new Date(r.start); end.setDate(end.getDate()+r.duration);
+  return Math.ceil((end-new Date())/86400000);
+}
+function pctLeft(r){ const dl=daysLeft(r); if(dl===null) return 0; return Math.max(0,Math.min(100,Math.round(dl/r.duration*100))); }
+function cdCls(dl){ return dl<=3?'critical':dl<=7?'urgent':''; }
+function pgCls(dl){ return dl<=3?'critical':dl<=7?'urgent':'ok'; }
+function fmtDate(d){ return d?new Date(d).toLocaleDateString('fr-FR'):'—'; }
+function fmtDays(dl){
+  if(dl===null) return '—';
+  if(dl>0) return `${dl} jour${dl>1?'s':''} restant${dl>1?'s':''}`;
+  if(dl===0) return '⚠ Dernier jour';
+  return `Expiré depuis ${Math.abs(dl)}j`;
+}
+
+function renderAll(){
+  updateStats(); renderAlerts();
+  renderFloor('rdc','content-rdc');
+  renderFloor('1er','content-1er');
+  updateMini('rdc'); updateMini('1er');
+}
+
+function filtered(floor){
+  let list=rooms.filter(r=>r.floor===floor);
+  if(currentFilter!=='all') list=list.filter(r=>r.status===currentFilter);
+  if(currentSearch){
+    const s=currentSearch.toLowerCase();
+    list=list.filter(r=>r.number.includes(s)||r.name.toLowerCase().includes(s)||r.notes.toLowerCase().includes(s)||r.referent.toLowerCase().includes(s));
+  }
+  return list;
+}
+
+function renderFloor(floor,cid){
+  const el=document.getElementById(cid);
+  const list=filtered(floor);
+  if(!list.length){el.innerHTML='<div class="empty-state">Aucun logement correspondant.</div>';return;}
+  el.innerHTML = currentView==='grid'
+    ? `<div class="rooms-grid">${list.map(cardHTML).join('')}</div>`
+    : tableHTML(list);
+}
+
+function cardHTML(r){
+  const dl=r.status==='occupee'?daysLeft(r):null;
+  const pct=r.status==='occupee'?pctLeft(r):0;
+  const cc=dl!==null?cdCls(dl):'', pc=dl!==null?pgCls(dl):'ok';
+  const sLabel={libre:'Libre',occupee:'Occupé',maintenance:'Maintenance'}[r.status];
+
+  const occ = r.status==='occupee'&&r.name ? `
+    <div class="occupant-info">
+      <div class="occupant-name">👤 ${r.name}${r.situation?`<span class="h-tag situation" style="margin-left:6px">${r.situation}</span>`:''}</div>
+      ${r.contact?`<div class="occupant-meta">📞 ${r.contact}</div>`:''}
+      ${r.referent?`<div class="occupant-meta">👔 Réf : ${r.referent}</div>`:''}
+      ${r.start?`<div class="occupant-meta">📅 Depuis le ${fmtDate(r.start)} · ${r.duration}j max</div>`:''}
+    </div>` : '';
+
+  const cd = r.status==='occupee'&&dl!==null ? `
+    <div class="countdown-block">
+      <div class="countdown-label">Temps restant</div>
+      <div class="countdown-value ${cc}">${fmtDays(dl)}</div>
+      <div class="progress-bar"><div class="progress-fill ${pc}" style="width:${pct}%"></div></div>
+    </div>` : '';
+
+  const notes = r.notes?`<div class="room-notes">💬 ${r.notes}</div>`:'';
+
+  let acts='';
+  if(r.status==='occupee') acts=`
+    <button class="card-btn extend-btn" onclick="event.stopPropagation();openExtend('${r.id}')">⏱️ Prolonger</button>
+    <button class="card-btn libre-btn" onclick="event.stopPropagation();askFree('${r.id}')">🔓 Libérer</button>
+    <button class="card-btn maintenance-btn" onclick="event.stopPropagation();quickMaint('${r.id}')">🔧 Maint.</button>
+    <button class="card-btn history-btn" onclick="event.stopPropagation();openHistory('${r.id}')">📋 Historique</button>`;
+  else if(r.status==='maintenance') acts=`
+    <button class="card-btn libre-btn" onclick="event.stopPropagation();askFree('${r.id}')">🔓 Libérer</button>
+    <button class="card-btn history-btn" onclick="event.stopPropagation();openHistory('${r.id}')">📋 Historique</button>`;
+  else acts=`<button class="card-btn history-btn" onclick="event.stopPropagation();openHistory('${r.id}')">📋 Historique</button>`;
+
+  return `<div class="room-card ${r.status}" onclick="openEdit('${r.id}')">
+    <div class="room-top">
+      <div><div class="room-number">${r.number}</div><div class="room-floor-tag">${r.floorLabel}</div></div>
+      <span class="status-badge ${r.status}">${sLabel}</span>
+    </div>
+    ${occ}${cd}${notes}
+    <div class="card-actions" onclick="event.stopPropagation()">${acts}</div>
+  </div>`;
+}
+
+function tableHTML(list){
+  const cols=[
+    {k:'number',l:'N°'},{k:'name',l:'Occupant'},{k:'situation',l:'Situation'},
+    {k:'referent',l:'Référent'},{k:'start',l:'Entrée'},{k:'dl',l:'Jours restants'},
+    {k:'status',l:'Statut'},{k:'_',l:''}
+  ];
+  const sortedList=[...list].sort((a,b)=>{
+    const va=sortCol==='dl'?(daysLeft(a)??9999):(a[sortCol]||'');
+    const vb=sortCol==='dl'?(daysLeft(b)??9999):(b[sortCol]||'');
+    return va<vb?-sortDir:va>vb?sortDir:0;
+  });
+  const heads=cols.map(c=>{
+    if(c.k==='_') return '<th></th>';
+    const arr=sortCol===c.k?(sortDir===1?'↑':'↓'):'↕';
+    return `<th class="${sortCol===c.k?'sorted':''}" onclick="setSort('${c.k}')">${c.l} <span class="sa">${arr}</span></th>`;
+  }).join('');
+  const rows=sortedList.map(r=>{
+    const dl=daysLeft(r); const dc=dl!==null?cdCls(dl):'';
+    const sLabel={libre:'Libre',occupee:'Occupé',maintenance:'Maintenance'}[r.status];
+    const acts=r.status==='occupee'
+      ?`<button class="t-btn" onclick="openExtend('${r.id}')">⏱️ Prolonger</button><button class="t-btn" onclick="askFree('${r.id}')">🔓 Libérer</button><button class="t-btn" onclick="openHistory('${r.id}')">📋</button>`
+      :`<button class="t-btn" onclick="openHistory('${r.id}')">📋</button>`;
+    return `<tr onclick="openEdit('${r.id}')">
+      <td><span class="td-num">${r.number}</span></td>
+      <td>${r.name||'<span style="color:var(--text-muted)">—</span>'}</td>
+      <td>${r.situation?`<span class="h-tag situation">${r.situation}</span>`:'—'}</td>
+      <td>${r.referent||'—'}</td>
+      <td>${fmtDate(r.start)}</td>
+      <td><span class="td-days ${dc}">${fmtDays(dl)}</span></td>
+      <td><span class="status-badge ${r.status}">${sLabel}</span></td>
+      <td onclick="event.stopPropagation()"><div class="td-acts">${acts}</div></td>
+    </tr>`;
+  }).join('');
+  return `<div class="table-wrapper"><table><thead><tr>${heads}</tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+
+function updateStats(){
+  document.getElementById('stat-libre').textContent=rooms.filter(r=>r.status==='libre').length;
+  document.getElementById('stat-occupee').textContent=rooms.filter(r=>r.status==='occupee').length;
+  document.getElementById('stat-maintenance').textContent=rooms.filter(r=>r.status==='maintenance').length;
+}
+function updateMini(floor){
+  const el=document.getElementById(`mini-stats-${floor}`); if(!el) return;
+  const fr=rooms.filter(r=>r.floor===floor);
+  const lib=fr.filter(r=>r.status==='libre').length, occ=fr.filter(r=>r.status==='occupee').length, mnt=fr.filter(r=>r.status==='maintenance').length;
+  el.innerHTML=`${lib>0?`<span class="floor-mini-stat libre">🟢 ${lib}</span>`:''}${occ>0?`<span class="floor-mini-stat occupee">🟠 ${occ}</span>`:''}${mnt>0?`<span class="floor-mini-stat maintenance">🔵 ${mnt}</span>`:''}`;
+}
+
+function renderAlerts(){
+  const crit=rooms.filter(r=>r.status==='occupee'&&daysLeft(r)!==null&&daysLeft(r)<=5);
+  const sec=document.getElementById('alerts-section');
+  if(!crit.length){sec.classList.remove('visible');return;}
+  sec.classList.add('visible');
+  document.getElementById('alerts-list').innerHTML=crit.map(r=>`
+    <div class="alert-item"><span class="alert-dot"></span> Logement <strong>${r.number}</strong>${r.name?' – '+r.name:''} : ${fmtDays(daysLeft(r))}</div>`).join('');
+}
+
+function showStartupReminder(){
+  const urgent=rooms.filter(r=>r.status==='occupee'&&daysLeft(r)!==null&&daysLeft(r)<=7);
+  if(!urgent.length) return;
+  document.getElementById('startup-date').textContent=`Rapport du ${new Date().toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}`;
+  document.getElementById('startup-list').innerHTML=urgent.sort((a,b)=>daysLeft(a)-daysLeft(b)).map(r=>{
+    const dl=daysLeft(r); const exp=dl<=0;
+    return `<div class="startup-item">
+      <div class="startup-num">${r.number}</div>
+      <div class="startup-info">
+        <div class="startup-name">${r.name||'Occupant sans nom'}</div>
+        <div class="startup-detail">${r.floorLabel}${r.referent?' · Réf : '+r.referent:''}</div>
+      </div>
+      <span class="startup-badge ${exp?'expired':'expiring'}">${fmtDays(dl)}</span>
+    </div>`;
+  }).join('');
+  document.getElementById('startup-overlay').classList.add('open');
+}
+
+function openEdit(id){
+  editingId=id;
+  const r=rooms.find(x=>x.id===id); if(!r) return;
+  document.getElementById('edit-title').textContent=`Logement ${r.number}`;
+  document.getElementById('edit-sub').textContent=`${r.floorLabel} · Modifier les informations`;
+  document.getElementById('edit-status').value=r.status;
+  document.getElementById('edit-name').value=r.name||'';
+  document.getElementById('edit-contact').value=r.contact||'';
+  document.getElementById('edit-start').value=r.start||new Date().toISOString().split('T')[0];
+  document.getElementById('edit-duration').value=r.duration||30;
+  document.getElementById('edit-notes').value=r.notes||'';
+  document.getElementById('edit-referent').value=r.referent||'';
+  document.getElementById('edit-situation').value=r.situation||'';
+  renderJournal(r);
+  onStatusChange(r.status);
+  document.getElementById('modal-edit-overlay').classList.add('open');
+}
+
+function onStatusChange(s){
+  const occ=s==='occupee';
+  document.getElementById('edit-occupant-fields').style.display=occ?'block':'none';
+  document.getElementById('journal-section').style.display=occ?'block':'none';
+  const r=editingId?rooms.find(x=>x.id===editingId):null;
+  document.getElementById('extend-group').style.display=(occ&&r&&r.name)?'block':'none';
+}
+
+function extendDuration(days){
+  const cur=parseInt(document.getElementById('edit-duration').value)||30;
+  document.getElementById('edit-duration').value=cur+days;
+  showToast(`⏱️ +${days}j — total : ${cur+days} jours`);
+}
+
+function openExtend(id){
+  openEdit(id);
+  setTimeout(()=>document.getElementById('extend-group').scrollIntoView({behavior:'smooth',block:'center'}),350);
+}
+
+function renderJournal(r){
+  const el=document.getElementById('journal-list');
+  if(!r.journal||!r.journal.length){el.innerHTML='<div style="font-size:12px;color:var(--text-muted);padding:4px 0 8px;">Aucune entrée.</div>';return;}
+  el.innerHTML=[...r.journal].reverse().map(j=>`
+    <div class="journal-entry"><div class="journal-date">${j.date}</div><div class="journal-text">${j.text}</div></div>`).join('');
+}
+
+function addJournalEntry(){
+  const inp=document.getElementById('journal-input');
+  const text=inp.value.trim(); if(!text) return;
+  const r=rooms.find(x=>x.id===editingId); if(!r) return;
+  const now=new Date();
+  r.journal.push({date:now.toLocaleDateString('fr-FR')+' '+now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}),text});
+  inp.value=''; renderJournal(r); showToast('📝 Note ajoutée');
+}
+
+function saveRoom(){
+  const r=rooms.find(x=>x.id===editingId); if(!r) return;
+  r.status=document.getElementById('edit-status').value;
+  r.name=document.getElementById('edit-name').value.trim();
+  r.contact=document.getElementById('edit-contact').value.trim();
+  r.start=document.getElementById('edit-start').value;
+  r.duration=parseInt(document.getElementById('edit-duration').value)||30;
+  r.notes=document.getElementById('edit-notes').value.trim();
+  r.referent=document.getElementById('edit-referent').value.trim();
+  r.situation=document.getElementById('edit-situation').value;
+  if(r.status!=='occupee'){r.name='';r.contact='';r.referent='';r.situation='';}
+  save(); closeModal('modal-edit-overlay'); renderAll();
+  showToast(`✅ Logement ${r.number} mis à jour`);
+}
+
+function askFree(id){
+  confirmFreeId=id;
+  const r=rooms.find(x=>x.id===id); if(!r) return;
+  document.getElementById('confirm-sub').textContent=`Logement ${r.number}${r.name?' — '+r.name:''}`;
+  document.getElementById('modal-confirm-overlay').classList.add('open');
+}
+function confirmFree(){
+  const r=rooms.find(x=>x.id===confirmFreeId); if(!r) return;
+  if(r.name){
+    r.history.push({name:r.name,contact:r.contact,start:r.start,duration:r.duration,
+      end:new Date().toISOString().split('T')[0],notes:r.notes,referent:r.referent,
+      situation:r.situation,journal:[...(r.journal||[])]});
+  }
+  r.status='libre';r.name='';r.contact='';r.start=null;r.notes='';r.referent='';r.situation='';r.journal=[];
+  save(); closeModal('modal-confirm-overlay'); renderAll();
+  showToast(`🔓 Logement ${r.number} libéré et archivé`);
+}
+function quickMaint(id){
+  const r=rooms.find(x=>x.id===id); if(!r) return;
+  r.status='maintenance'; save(); renderAll(); showToast(`🔧 Logement ${r.number} en maintenance`);
+}
+
+function openHistory(id){
+  const r=rooms.find(x=>x.id===id); if(!r) return;
+  document.getElementById('history-title').textContent=`Historique — Logement ${r.number}`;
+  document.getElementById('history-sub').textContent=r.floorLabel;
+  const tl=document.getElementById('history-timeline');
+  if(!r.history||!r.history.length){tl.innerHTML='<div class="h-empty">Aucun historique pour ce logement.</div>';
+  }else{
+    tl.innerHTML=[...r.history].reverse().map(h=>`
+      <div class="history-entry">
+        <div class="h-avatar">👤</div>
+        <div class="h-body">
+          <div class="h-name">${h.name}</div>
+          <div class="h-dates">📅 Du ${fmtDate(h.start)} au ${fmtDate(h.end)} · ${h.duration} jours max</div>
+          ${h.contact?`<div style="font-size:12px;color:var(--text-muted);margin-bottom:4px;">📞 ${h.contact}</div>`:''}
+          <div>
+            ${h.situation?`<span class="h-tag situation">${h.situation}</span>`:''}
+            ${h.referent?`<span class="h-tag referent">👔 ${h.referent}</span>`:''}
+          </div>
+          ${h.notes?`<div class="h-notes">💬 ${h.notes}</div>`:''}
+          ${h.journal&&h.journal.length?`
+            <div style="margin-top:8px;">
+              <div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);margin-bottom:4px;">Journal (${h.journal.length} note${h.journal.length>1?'s':''})</div>
+              ${h.journal.map(j=>`<div class="journal-entry"><div class="journal-date">${j.date}</div><div class="journal-text">${j.text}</div></div>`).join('')}
+            </div>`:''}
+        </div>
+      </div>`).join('');
+  }
+  document.getElementById('modal-history-overlay').classList.add('open');
+}
+
+function setFilter(f,btn){ currentFilter=f; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderAll(); }
+function setSearch(v){ currentSearch=v; renderAll(); }
+function setView(v){ currentView=v; document.getElementById('vbtn-grid').classList.toggle('active',v==='grid'); document.getElementById('vbtn-table').classList.toggle('active',v==='table'); renderAll(); }
+function setSort(c){ if(sortCol===c) sortDir*=-1; else{sortCol=c;sortDir=1;} renderAll(); }
+function toggleAccordion(id){ document.getElementById(id).classList.toggle('open'); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open');}));
+
+function exportData(){
+  const occ=rooms.filter(r=>r.status==='occupee');
+  let txt=`SAMR — LOS SANTOS\nExport du ${new Date().toLocaleString('fr-FR')}\n${'═'.repeat(42)}\n\n`;
+  txt+=`RÉSUMÉ\nTotal : ${rooms.length}  ·  Libres : ${rooms.filter(r=>r.status==='libre').length}  ·  Occupés : ${occ.length}  ·  Maintenance : ${rooms.filter(r=>r.status==='maintenance').length}\n\n`;
+  txt+=`OCCUPANTS ACTUELS\n${'─'.repeat(42)}\n`;
+  occ.forEach(r=>{
+    const dl=daysLeft(r);
+    txt+=`\nLogement ${r.number} (${r.floorLabel})\n`;
+    txt+=`  Occupant  : ${r.name||'N/A'}\n  Contact   : ${r.contact||'N/A'}\n`;
+    txt+=`  Référent  : ${r.referent||'N/A'}\n  Situation : ${r.situation||'N/A'}\n`;
+    txt+=`  Entrée    : ${fmtDate(r.start)}\n  Durée max : ${r.duration}j\n`;
+    txt+=`  Restant   : ${fmtDays(dl)}\n`;
+    if(r.notes) txt+=`  Notes     : ${r.notes}\n`;
+    if(r.journal&&r.journal.length){ txt+=`  Journal   :\n`; r.journal.forEach(j=>txt+=`    [${j.date}] ${j.text}\n`); }
+  });
+  txt+=`\n\nHISTORIQUE\n${'─'.repeat(42)}\n`;
+  rooms.forEach(r=>{
+    if(!r.history||!r.history.length) return;
+    txt+=`\nLogement ${r.number} (${r.floorLabel})\n`;
+    r.history.forEach(h=>txt+=`  • ${h.name} | ${fmtDate(h.start)} → ${fmtDate(h.end)} | ${h.duration}j${h.situation?' | '+h.situation:''}\n`);
+  });
+  const blob=new Blob([txt],{type:'text/plain'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download=`samr_export_${new Date().toISOString().split('T')[0]}.txt`; a.click();
+  showToast('📤 Export téléchargé');
+}
+
+function showToast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2800); }
+
+renderAll();
+showStartupReminder();
+setInterval(()=>{ renderAlerts(); renderFloor('rdc','content-rdc'); renderFloor('1er','content-1er'); },60000);
+</script>
+</body>
+</html>
